@@ -1,0 +1,135 @@
+.cards-slide-wrapper {
+  width: 100%;
+  padding: 60px 10%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-slide-wrapper .swiper-slide *:not(.cards-slide-button) {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.cards-slide-title-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff; /* white text */
+  margin-bottom: 30px;
+}
+
+.cards-slide-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.cards-slide-arrow {
+  background: #fff; /* white background */
+  color: #000; /* black icon */
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-slide-arrow:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+.cards-slide-swiper {
+  overflow: visible;
+}
+
+.cards-slide-card {
+  background: #1a1a1a; /* dark card */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+}
+
+.cards-slide-image {
+  height: 15rem;
+  width: 90%;
+  object-fit: contain;
+  margin-top: 1rem;
+  border-radius: 1.8rem;
+  background-color: #2a2a2a;
+}
+
+.cards-slide-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.cards-slide-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000 !important;
+}
+
+.cards-slide-text {
+  font-size: 0.95rem;
+  color: #838383; /* light gray text */
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.cards-slide-button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-radius: 5rem;
+  width: 100vw !important;
+  max-width: 10rem;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.cards-slide-button:hover {
+  background-color: #e6e6e6;
+}
+
+@media (max-width: 768px) {
+  .cards-slide-image {
+    height: 180px;
+  }
+
+  .cards-slide-title {
+    font-size: 1rem;
+  }
+
+  .cards-slide-text {
+    font-size: 0.85rem;
+  }
+
+  .cards-slide-title-heading {
+    font-size: 1.5rem;
+  }
+
+  .cards-slide-controls {
+    right: 5%;
+  }
+}

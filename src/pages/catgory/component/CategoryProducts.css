@@ -1,0 +1,135 @@
+.category-products-wrapper {
+  /* background-color: #fff; */
+}
+
+.category-products-card {
+  /* background-color: #f8f8f8; */
+  /* padding: 20px; */
+  border-radius: 10px;
+  /* height: 100%; */
+}
+
+.category-products-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.category-products-main-image {
+  max-width: 100%;
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category-products-dots {
+  font-size: 20px;
+  color: #000;
+}
+
+.category-products-dots span {
+  margin-inline: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.size_tag {
+  margin-inline: 0.5rem;
+  background-color: lightgray;
+  padding: 0.2rem;
+  padding-inline: 1rem;
+  border-radius: 5rem;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+.category-products-tagline {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 8px 0;
+}
+
+.category-products-desc {
+  font-size: 1rem;
+  color: #3b3b3b;
+  margin-bottom: 10px;
+  /* text-align: justify; */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-products-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.category-products-sizes {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.category-products-sizes .br {
+  height: 1rem;
+  display: block;
+}
+
+.category-products-wrapper hr {
+  margin-block: 2rem;
+  margin-bottom: 3rem;
+  margin-inline: 25%;
+}
+
+.category-products-thumbnails {
+  /* background-color: #e0e0e0; */
+  padding: 15%;
+  padding-block: 0px;
+  border-radius: 8px;
+}
+
+.category-products-thumb-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.category-products-thumb {
+  /* width: 40px; */
+  /* height: 40px; */
+  /* width: 90% !important; */
+  height: 5rem !important;
+  /* width: 5rem !important; */
+  /* object-fit: contain; */
+  margin-bottom: 4px;
+  border-radius: 0.5rem;
+}
+
+.category-products-thumb-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.category-products-features {
+  /* font-weight: bold; */
+  /* text-align: left; */
+  font-size: 1rem;
+  color: #000;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.category-products-features li {
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+}
+.category_product_page_button {
+  margin-block: 1rem;
+  width: 90%;
+}

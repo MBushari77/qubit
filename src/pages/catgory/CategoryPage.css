@@ -1,0 +1,8 @@
+.category_page_container {
+  padding-bottom: 5rem;
+  background-color: #f0f0f0;
+}
+.questions_on_category {
+  padding-block: 5rem;
+  background-color: black !important;
+}

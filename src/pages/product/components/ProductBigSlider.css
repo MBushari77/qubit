@@ -1,0 +1,129 @@
+.product-big-slider-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-inline: 10%;
+  overflow: hidden;
+}
+
+.product-big-slider-title-container {
+  width: 90%;
+  color: #0e0e0e;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-align: left;
+  margin-block: 3rem;
+}
+
+.product-big-slider-swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.product-big-slider-card {
+  background: #f4f4f4;
+  overflow: hidden;
+  border: solid #e6e6e6 1px;
+  position: relative;
+  height: 42rem;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f9f9f9;
+  border-radius: 1.8rem;
+  justify-content: flex-end;
+}
+
+.product-big-slider-card-text {
+  padding: 8%;
+  text-align: left;
+}
+
+.product-big-slider-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.product-big-slider-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.product-big-slider-controls {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.product-big-slider-button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  background: rgb(233, 233, 233);
+  color: dimgray;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.product-big-slider-button:hover {
+  transform: scale(1.05);
+}
+
+.swiper-backface-hidden .swiper-slide {
+  width: 24rem !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .product-big-slider-card {
+    height: 36rem;
+  }
+  .product-big-slider-title-container {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-big-slider-card {
+    height: 30rem;
+  }
+  .product-big-slider-title {
+    font-size: 1.2rem;
+  }
+  .product-big-slider-subtitle {
+    font-size: 1rem;
+  }
+  .product-big-slider-title-container {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-big-slider-card {
+    height: 24rem;
+  }
+  .product-big-slider-title {
+    font-size: 1rem;
+  }
+  .product-big-slider-subtitle {
+    font-size: 0.9rem;
+  }
+  .product-big-slider-title-container {
+    font-size: 1.5rem;
+  }
+  .product-big-slider-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}

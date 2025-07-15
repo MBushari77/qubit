@@ -1,0 +1,30 @@
+/* Book (default) font for general content */
+@font-face {
+  font-family: "Kamerik205Book";
+  src: url("./Kamerik205Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold font for headings */
+@font-face {
+  font-family: "Kamerik205Bold";
+  src: url("./Kamerik205Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Apply default font to all elements */
+* {
+  font-family: "Kamerik205Book", sans-serif;
+}
+
+/* Override headings to use bold font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kamerik205Bold", sans-serif;
+}

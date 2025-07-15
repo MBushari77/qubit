@@ -1,0 +1,82 @@
+.subcategory-hero-container {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 10%;
+}
+
+.subcategory-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.subcategory-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.subcategory-hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.subcategory-hero-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.subcategory-hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subcategory-hero-button {
+  padding: 0.8rem;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5rem;
+  transition: background 0.3s ease;
+  padding-inline: 2.5rem;
+}
+
+.subcategory-hero-button:hover {
+  background-color: #f0f0f0;
+}
+
+.subcategory-hero-inquiry {
+  background-color: #000;
+  color: #fff;
+}
+
+.subcategory-hero-inquiry:hover {
+  background-color: #333;
+}
+
+.subcategory-hero-specsheet {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.subcategory-hero-specsheet:hover {
+  background: #fff;
+  color: #000;
+}

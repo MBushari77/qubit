@@ -1,0 +1,43 @@
+.about_header {
+  padding-top: 5rem;
+  height: 80vh;
+  background-image: url("./about.jpg");
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_header_content {
+  width: 90%;
+  max-width: 75rem;
+  text-align: center;
+}
+.about_header_content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.about_header_content p {
+  font-size: 1.5rem;
+}
+.about_header_content button {
+  width: 90%;
+  max-width: 12rem;
+  margin: 1rem;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  border: solid black 2px;
+  background-color: black;
+  color: white;
+}
+
+/* 
+.about_header_primary{
+    background-color: ;
+    color: 
+} */
+.about_header_secondary {
+  background-color: white !important;
+  color: black !important;
+}

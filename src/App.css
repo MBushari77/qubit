@@ -1,0 +1,18 @@
+* {
+  font-family: "Kamerik205Book", sans-serif !important;
+}
+body {
+  background-color: #f5f5f7;
+}
+.cards-slide-wrapper {
+  overflow-y: hidden !important;
+}
+.gradient-vertical {
+  background: linear-gradient(to bottom, black, white) !important;
+  height: 20rem;
+  background-color: aquamarine;
+}
+
+.card-text {
+  color: dimgray !important;
+}

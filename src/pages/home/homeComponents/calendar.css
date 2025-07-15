@@ -1,0 +1,165 @@
+.event-calendar {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding-inline: 4rem;
+}
+
+.calendar-header {
+  /* background-color: #f8f9fa; */
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: bold;
+  width: 100vw !important;
+  max-width: 18rem !important;
+  padding-bottom: 0px;
+  padding-top: 1.5rem;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.calendar-header h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.calendar-header h5 {
+  font-size: 1rem;
+  margin-bottom: 0rem !important;
+}
+.calendar-body {
+  padding: 0.5rem;
+  max-width: 20rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* background-color: #f1f1f1; */
+  text-align: center;
+  font-weight: 600;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.weekdays div {
+  padding: 0.5rem;
+  /* border-right: 1px solid #ddd; */
+}
+
+.weekdays div:last-child {
+  border-right: none;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.day {
+  /* border: 1px solid #eee; */
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem !important;
+  margin: 0.1rem !important;
+}
+
+.day:hover {
+  background-color: #f5f5f5;
+}
+
+.other-month {
+  color: #ccc;
+}
+
+.has-event {
+  border: 2px solid #198754;
+  border-radius: 0.8rem;
+}
+
+.selected-day {
+  background-color: #198754;
+  color: #fff;
+  border-radius: 0.8rem;
+}
+
+.caleder_controler {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.caleder_controler button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: dimgray;
+  cursor: pointer;
+}
+
+.caleder_controler button:hover {
+  color: #084298;
+}
+.calendar-nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 0.8rem;
+  color: #0d6efd;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.calendar-nav-btn:hover {
+  text-decoration: underline;
+}
+.weekdays * {
+  font-size: 0.9rem !important;
+}
+
+.calendar-form {
+  /* background-color: #f9f9f9; */
+  padding: 1rem;
+  /* border-radius: 0.5rem; */
+  padding-top: 0px;
+  margin: 0px !important;
+  padding-inline: 0px !important;
+}
+
+.calendar-form-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.calendar-form-input-group {
+  position: relative;
+}
+
+.calendar-form-input-group i {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.calendar-form-input {
+  padding-left: 2rem !important;
+}
+
+.calendar-form-submit-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: black;
+  padding: 0.45rem;
+  color: white;
+  margin: 0px;
+}
+
+.calendar-form-success {
+  border-radius: 0.5rem;
+}

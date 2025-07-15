@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #010712;
+  --secondary-color: #818386;
+  --bg-color: #fcfdfd;
+  --button-color: #3b3636;
+  --h1-color: #3f444c;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fcfdfd;
+  --secondary-color: #818386;
+  --bg-color: #010712;
+  --button-color: #818386;
+  --h1-color: #fcfdfd;
+}
+
+.contact-container {
+  display: flex;
+  width: 90%;
+  padding-inline: 10rem;
+  height: 100vh;
+  background: var(--bg-color);
+  overflow: hidden;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.contact-left-col {
+  width: 45vw;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-logo {
+  width: 10rem;
+  padding: 1.5rem;
+}
+
+.contact-right-col {
+  width: 55vw;
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 5rem 3.5rem;
+  position: relative;
+}
+
+.contact-heading {
+  color: var(--h1-color);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.01rem;
+  max-width: 90%;
+  margin-bottom: 2rem;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.contact-form {
+  max-width: 100%;
+  position: relative;
+}
+
+.contact-label,
+.contact-toggle-label {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: "Jost", sans-serif;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  font-family: "Helvetica Neue", sans-serif;
+  color: var(--primary-color);
+  font-weight: 500;
+  background: var(--bg-color);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--primary-color);
+}
+
+.contact-textarea {
+  resize: none;
+}
+
+.contact-button {
+  text-transform: uppercase;
+  font-weight: 300;
+  background: var(--button-color);
+  color: var(--bg-color);
+  width: 10rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+}
+
+.contact-input:hover,
+.contact-textarea:hover,
+.contact-button:hover {
+  opacity: 0.5;
+}
+
+.contact-button:active {
+  opacity: 0.8;
+}
+
+/* Toggle Switch */
+.contact-theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+}
+
+.contact-toggle-label {
+  margin-left: 1.25rem;
+}
+
+.contact-theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.contact-theme-switch input {
+  display: none;
+}
+
+.contact-slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.contact-slider::before {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  width: 26px;
+  height: 26px;
+  transition: 0.4s;
+}
+
+.contact-theme-switch input:checked + .contact-slider {
+  background-color: var(--button-color);
+}
+
+.contact-theme-switch input:checked + .contact-slider::before {
+  transform: translateX(26px);
+}
+
+.contact-slider.contact-round {
+  border-radius: 34px;
+}
+
+.contact-slider.contact-round::before {
+  border-radius: 50%;
+}
+
+#contact-error,
+#contact-success-msg {
+  max-width: 90%;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: "Jost", sans-serif;
+  color: var(--secondary-color);
+}
+
+#contact-success-msg {
+  transition-delay: 3s;
+}
+
+/* Responsive */
+@media only screen and (max-width: 950px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-left-col,
+  .contact-right-col {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-logo {
+    width: 8rem;
+  }
+
+  .contact-heading {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 0.75rem;
+  }
+
+  .contact-input,
+  .contact-textarea,
+  .contact-button {
+    font-size: 0.75rem;
+  }
+
+  .contact-theme-switch-wrapper {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .contact-toggle-label {
+    font-size: 0.6rem;
+  }
+
+  .contact-button {
+    width: 7rem;
+  }
+
+  .contact-theme-switch {
+    height: 28px;
+    width: 50px;
+  }
+
+  .contact-slider::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-theme-switch input:checked + .contact-slider::before {
+    transform: translateX(20px);
+  }
+}
