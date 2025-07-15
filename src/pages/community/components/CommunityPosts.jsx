@@ -81,20 +81,25 @@ const CommunityPosts = () => {
           onClick={() => setShowPostModal(true)}
           className="community-posts-add-btn"
         >
-          Add Post ➕
+          Add Post <span className="bi bi-chat" />
         </button>
       </div>
 
       {posts.map((post) => (
         <div key={post.id} className="community-posts-card">
           <div className="d-flex align-items-start gap-3">
-            <div className="community-posts-avatar">👤</div>
+            <div className="community-posts-avatar">
+              <span className="bi bi-person-fill" />
+            </div>
             <div>
               <strong>{post.author}</strong>
               <p>{post.content}</p>
               <div className="d-flex justify-content-between">
                 <div className="d-flex align-items-center gap-3">
-                  <span>💬 Comments {post.comments.length}</span>
+                  <span>
+                    <span className="bi bi-chat-right-text" /> Comments{" "}
+                    {post.comments.length}
+                  </span>
                   <button
                     className="community-posts-comment-btn"
                     onClick={() => {
@@ -102,7 +107,7 @@ const CommunityPosts = () => {
                       setShowCommentModal(true);
                     }}
                   >
-                    Add Comments ➕
+                    Add Comments <span className="bi bi-chat-dots" />
                   </button>
                 </div>
                 <small>{formatDate(post.date)}</small>
