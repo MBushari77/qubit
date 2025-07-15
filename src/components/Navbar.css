@@ -58,11 +58,22 @@
   padding: 0;
 }
 
+.main-nav-list-two * {
+  font-size: 1.5rem;
+}
+
 .main-nav-link {
   text-decoration: none;
-  color: #333;
+  color: #898989;
   font-size: 0.8rem;
   transition: color 0.3s;
+}
+
+.main-nav-link-active {
+  color: #0071e3;
+}
+.main-nav-link-active:hover {
+  color: #333;
 }
 
 .main-nav-link:hover {
@@ -79,8 +90,16 @@
 }
 
 .main-nav-logo img {
-  /* filter: brightness(0%); */
+  height: 2rem;
 }
+
+.main-nav-list-two .main-nav-link {
+  /* font-size: 1rem; */
+  border-right: solid rgb(235, 235, 235) 1px !important;
+  padding-right: 1rem;
+  color: #333;
+}
+
 @media (max-width: 768px) {
   .main-nav-burger {
     display: block;

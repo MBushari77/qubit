@@ -21,8 +21,7 @@ const Category = () => {
     const fetchGallary = async () => {
       try {
         const response = await API.get(`/sectionfour/category/${id}`);
-        console.log("Gallary");
-        console.log(response.data);
+
         setGallary(response.data);
       } catch (error) {
         console.error("Failed to fetch Gallary:", error);
@@ -58,8 +57,7 @@ const Category = () => {
     const fetchcontentCards = async () => {
       try {
         const response = await API.get(`/sectionfive/category/${id}`);
-        console.log("contentCards");
-        console.log(response.data);
+
         setcontentCards(response.data);
       } catch (error) {
         console.error("Failed to fetch contentCards:", error);
@@ -86,12 +84,7 @@ const Category = () => {
 
   return (
     <div className="category_page_container">
-      {/* <CategorySlider /> */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <CategorySlider catId={id} />
       <CategoryHeroSection category_id={id} />
       <CategoryImageVideo categoryId={id} />
       <CategoryProducts categoryId={id} />

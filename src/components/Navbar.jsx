@@ -42,11 +42,6 @@ const Navbar = () => {
 
         <ul className={`main-nav-list ${menuOpen ? "main-nav-open" : ""}`}>
           <li className="main-nav-item">
-            <Link to="/" className="main-nav-logo">
-              <img src={logo} alt="" srcset="" />
-            </Link>
-          </li>
-          <li className="main-nav-item">
             <Link to="/" className="main-nav-link">
               Home
             </Link>
@@ -57,25 +52,42 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="main-nav-item">
-            <Link to="/projects" className="main-nav-link">
-              Projects
-            </Link>
-          </li>
-          <li className="main-nav-item">
             <Link to="/contact" className="main-nav-link">
               Contact Us
             </Link>
           </li>
           <li className="main-nav-item">
+            <Link
+              to="/Community"
+              className="main-nav-link main-nav-link-active"
+            >
+              Community
+            </Link>
+          </li>
+          {/* <li className="main-nav-item">
             <Link to="/airpods" className="main-nav-link">
               <button className="nav_button">Portfolio</button>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <hr style={{ margin: "0.2rem", opacity: "0.1" }} />
       <center>
-        <ul className={`main-nav-list ${menuOpen ? "main-nav-open" : ""}`}>
+        <ul
+          className={`main-nav-list main-nav-list-two ${
+            menuOpen ? "main-nav-open" : ""
+          }`}
+        >
+          <li className="main-nav-item">
+            <Link to="/" className="main-nav-logo">
+              <img src={logo} alt="" srcset="" />
+            </Link>
+          </li>{" "}
+          <li className="main-nav-item">
+            <Link to="/projects" className="main-nav-link">
+              Projects
+            </Link>
+          </li>
           {Categories.map((cat, id) => (
             <li className="main-nav-item" key={id}>
               <Link to={`/category/${cat.id}`} className="main-nav-link">

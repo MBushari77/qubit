@@ -11,6 +11,7 @@ import SectionFourCategory from "./component/SectionFourCategory";
 import { title } from "framer-motion/client";
 import SectionFiveCategory from "./component/SectionFiveCategory";
 import SectionSixCategory from "./component/SectionSixCategory";
+import SectionZeroCategory from "./component/SectionZeroCategory";
 // import more as needed...
 
 const ManageOneCategory = () => {
@@ -20,6 +21,10 @@ const ManageOneCategory = () => {
 
   // Define sections in an array with title and component
   const sections = [
+    {
+      title: "Sub Categories",
+      component: <SectionZeroCategory subCategoryId={id} />,
+    },
     {
       title: "Info & Products",
       component: <SectionOneCategory categoryId={id} />,

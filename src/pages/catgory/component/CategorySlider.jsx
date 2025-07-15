@@ -5,13 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 import "./CategorySlider.css";
 
-const CategorySlider = () => {
+const CategorySlider = ({ catId }) => {
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    API.get("/category")
-      .then((res) => setCategories(res.data))
+    API.get(`/subcategorysectionzero/category/${catId}`)
+      .then((res) => {
+        console.log("##################################################");
+        console.log(res.data);
+        setCategories(res.data);
+      })
       .catch(console.error);
   }, []);
 
@@ -28,10 +32,10 @@ const CategorySlider = () => {
           >
             <img
               src={`${BaseAPI}/uploads/${cat.icon}`}
-              alt={cat.name}
+              alt={cat.title}
               className="category-slider-custom-image"
             />
-            <div className="category-slider-custom-name">{cat.name}</div>
+            <div className="category-slider-custom-name">{cat.title}</div>
           </div>
         ))}
       </div>

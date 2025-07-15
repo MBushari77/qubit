@@ -1,16 +1,21 @@
 import React from "react";
 import { BsChevronRight } from "react-icons/bs";
 
-const BlogSidebar = () => {
+const BlogSidebar = ({ comunityBlogs, setId, id }) => {
   return (
     <div className="community-sidebar">
-      {[...Array(7)].map((_, idx) => (
+      {comunityBlogs?.map((blog, idx) => (
         <div
           key={idx}
-          className="community-sidebar-item d-flex justify-content-between align-items-center"
+          onClick={() => setId(blog.id)}
+          className={`community-sidebar-item d-flex justify-content-between align-items-center ${
+            blog.id === id && "community-active-tab"
+          }`}
         >
-          <span>COB Technology</span>
-          <BsChevronRight />
+          <span>{blog.name}</span>
+          <span className="community-tab-button">
+            <BsChevronRight />
+          </span>
         </div>
       ))}
     </div>
