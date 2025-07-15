@@ -14,6 +14,8 @@ import ManageOneProduct from "./pages/manageOneProduct/ManageOneProduct";
 import AddSubCategory from "./pages/sub_category_page_main/AddSubCategory";
 import ManageOneSubCategory from "./pages/manageSubCategory/ManageOneSubCategory";
 import AddProject from "./pages/projects_page_main/AddProject";
+import ManageCommunity from "./pages/community_page_main/ManageCommunity";
+import ManageOneSubCommunityPost from "./pages/manageOneCommunityPost/ManageOneSubCommunityPost";
 
 const DashboardRoutes = () => {
   return (
@@ -38,6 +40,12 @@ const DashboardRoutes = () => {
         <Route path="/sub_category/:id" element={<ManageOneSubCategory />} />
         {/* Projects */}
         <Route path="/projects" element={<AddProject />} />
+        {/* Community */}
+        <Route path="/community" element={<ManageCommunity />} />
+        <Route
+          path="/community/post/:id"
+          element={<ManageOneSubCommunityPost />}
+        />
       </Routes>
     </div>
   );

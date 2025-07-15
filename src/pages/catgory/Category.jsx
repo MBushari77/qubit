@@ -86,7 +86,12 @@ const Category = () => {
 
   return (
     <div className="category_page_container">
-      <CategorySlider />
+      {/* <CategorySlider /> */}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <CategoryHeroSection category_id={id} />
       <CategoryImageVideo categoryId={id} />
       <CategoryProducts categoryId={id} />

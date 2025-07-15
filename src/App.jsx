@@ -10,6 +10,7 @@ import Product from "./pages/product/Product";
 import SubCategory from "./pages/subCategory/SubCategory";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contactUs/Contact";
+import CommunityBlogPage from "./pages/community/CommunityBlogPage";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/product/:id" element={<Product />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/community" element={<CommunityBlogPage />} />
         {/* ####################################################### */}
         {/* ####################################################### */}
         {/* ####################################################### */}

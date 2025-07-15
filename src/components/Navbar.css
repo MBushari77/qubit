@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding-bottom: 1rem;
+  padding-block: 0.5rem;
 }
 
 .main-nav-container {
@@ -29,7 +29,8 @@
 }
 
 .main-nav-logo img {
-  height: 2rem;
+  height: 1.5rem;
+  filter: brightness(0);
 }
 
 .main-nav-burger {
@@ -77,6 +78,9 @@
   padding-inline: 2rem;
 }
 
+.main-nav-logo img {
+  /* filter: brightness(0%); */
+}
 @media (max-width: 768px) {
   .main-nav-burger {
     display: block;

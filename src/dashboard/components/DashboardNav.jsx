@@ -42,6 +42,11 @@ const DashboardLayout = () => {
                 Projects
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/dashboard/community" className="nav-link">
+                Community
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
