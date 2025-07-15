@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Gallary.css";
 import BaseAPI from "../utils/BaseAPI";
 
-const grid = [8, 4, 4, 4, 4, 4, 8];
+const grid = [4, 4, 4, 8, 4, 4, 8];
 const colors = ["white", "black"];
 
 const Gallary = ({ backgrounds }) => {

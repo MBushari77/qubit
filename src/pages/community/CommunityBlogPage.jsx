@@ -6,6 +6,7 @@ import BlogContent from "./components/BlogContent";
 import MorePosts from "./components/MorePosts";
 import HeroSection from "./components/HeroSection";
 import API from "../../utils/API";
+import CommunityPosts from "./components/CommunityPosts";
 
 const CommunityBlogPage = () => {
   const [id, setId] = useState(0);
@@ -33,7 +34,7 @@ const CommunityBlogPage = () => {
         </div>
         <div className="col-md-7">
           {Number(id) === 0 ? (
-            <div>Comments</div>
+            <CommunityPosts />
           ) : (
             <BlogContent setId={setId} id={id} />
           )}

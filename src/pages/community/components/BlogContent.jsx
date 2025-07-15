@@ -50,12 +50,26 @@ const BlogContent = ({ id, setId }) => {
     });
   }
 
+  // share function
+  const handleShare = async () => {
+    try {
+      const shareUrl = `${window.location.origin}/community/${id}`; // Adjust this to match your route
+      await navigator.share({
+        title: post?.title || "Qubit Blog Post",
+        text: post?.text || "Check out this blog post on Qubit!",
+        url: shareUrl,
+      });
+    } catch (error) {
+      console.error("Share failed:", error);
+    }
+  };
+
   return (
     <div className="community-blog-content">
       <div className="d-flex justify-content-between align-items-center">
         <h2>COB Technology {id}</h2>
         <div>
-          <button className="community-share-btn">
+          <button className="community-share-btn" onClick={handleShare}>
             Share <BsShareFill />
           </button>
           <button
