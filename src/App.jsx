@@ -26,6 +26,7 @@ function App() {
         {/* ####################################################### */}
         {/* ####################################################### */}
         {/* Dashboard Section */}
+        {/* handle login later */}
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
       </Routes>
       <Footer />
