@@ -40,13 +40,13 @@ const Gallary = ({ backgrounds }) => {
                       {" "}
                       <h3
                         className="card_info_name"
-                        style={{ color: colors[index % 2] }}
+                        style={{ color: bg.color || colors[index % 2] }}
                       >
                         {bg.title}
                       </h3>
                       <i
                         className="card_info_description"
-                        style={{ color: colors[index % 2] }}
+                        style={{ color: bg.color || colors[index % 2] }}
                       >
                         {bg.info}
                       </i>

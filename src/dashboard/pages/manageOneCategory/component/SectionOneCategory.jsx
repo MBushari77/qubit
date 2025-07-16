@@ -145,19 +145,38 @@ const SectionOneCategory = ({ categoryId }) => {
     const formData = new FormData();
     formData.append("category_id", categoryId);
     formData.append("headline", info.headline);
-    if (info.image) formData.append("image", info.image);
 
+    // Handle main image
+    if (info.image) {
+      formData.append("image", info.image);
+    } else if (imagePreview) {
+      const oldImage = imagePreview.split("/").pop();
+      formData.append("oldImage", oldImage);
+    }
+
+    // Handle products
     products.forEach((p, i) => {
-      formData.append(`product${i + 1}_name`, p.name);
-      formData.append(`product${i + 1}_description`, p.description);
-      formData.append(`product${i + 1}_feature1`, p.featureOne);
-      formData.append(`product${i + 1}_feature2`, p.featureTwo);
-      formData.append(`product${i + 1}_link`, p.link);
+      const index = i + 1;
+      formData.append(`product${index}_name`, p.name);
+      formData.append(`product${index}_description`, p.description);
+      formData.append(`product${index}_feature1`, p.featureOne);
+      formData.append(`product${index}_feature2`, p.featureTwo);
+      formData.append(`product${index}_link`, p.link);
+
+      // Specsheets
       if (p.specsheet) {
-        formData.append(`product${i + 1}_specsheet`, p.specsheet);
+        formData.append(`product${index}_specsheet`, p.specsheet);
+      } else if (productSpecsheetUrls[i]) {
+        const specsheetFilename = productSpecsheetUrls[i].split("/").pop();
+        formData.append(`product${index}_specsheet`, specsheetFilename);
       }
+
+      // Images
       if (p.image) {
-        formData.append(`product${i + 1}_image`, p.image);
+        formData.append(`product${index}_image`, p.image);
+      } else if (productImagePreviews[i]) {
+        const imageFilename = productImagePreviews[i].split("/").pop();
+        formData.append(`product${index}_image`, imageFilename);
       }
     });
 

@@ -105,9 +105,9 @@ const CategoryHeroSection = ({ category_id }) => {
               <h2 className="category-hero-title">
                 {sectionOneData[0]?.headline}
               </h2>
-              <p className="category-hero-text">
+              {/* <p className="category-hero-text">
                 {sectionOneData[0]?.headline}
-              </p>
+              </p> */}
             </div>
             <div
               className="category-hero-image"

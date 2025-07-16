@@ -4,16 +4,20 @@ import API from "../../../../utils/API";
 
 const SectionThreeCategory = ({ categoryId }) => {
   const [products, setProducts] = useState([]);
-  const [activeTab, setActiveTab] = useState("new"); // Default to "new" tab
+  const [activeTab, setActiveTab] = useState(""); // ← Start empty
 
   useEffect(() => {
     if (categoryId) {
-      API.get(`/sectionthree/getall`)
+      API.get(`/sectionthree/by-category/${categoryId}`)
         .then((res) => {
-          console.log(res.data.data);
-          setProducts(res.data.data);
-          if (res.data.length > 0) {
-            setActiveTab(res.data[0].id.toString());
+          const productData = res.data.data;
+          setProducts(productData);
+
+          // 👇 Set active tab: first product if exists, otherwise "new"
+          if (productData.length > 0) {
+            setActiveTab(productData[0].id.toString());
+          } else {
+            setActiveTab("new");
           }
         })
         .catch((err) => console.error("Fetch error:", err));
@@ -26,7 +30,7 @@ const SectionThreeCategory = ({ categoryId }) => {
 
       {/* Tabs */}
       <ul className="nav nav-tabs mb-3">
-        {products.map((product, idx) => (
+        {products.slice(0, 4).map((product, idx) => (
           <li className="nav-item" key={product.id}>
             <button
               className={`nav-link ${
@@ -38,18 +42,22 @@ const SectionThreeCategory = ({ categoryId }) => {
             </button>
           </li>
         ))}
-        <li className="nav-item">
-          <button
-            className={`nav-link ${activeTab === "new" ? "active" : ""}`}
-            onClick={() => setActiveTab("new")}
-          >
-            ➕ New Product
-          </button>
-        </li>
+        {/* Only show "new" tab if less than 4 products */}
+        {products.length < 4 && (
+          <li className="nav-item">
+            <button
+              className={`nav-link ${activeTab === "new" ? "active" : ""}`}
+              onClick={() => setActiveTab("new")}
+            >
+              ➕ New Product
+            </button>
+          </li>
+        )}
       </ul>
 
       {/* Tab Content */}
       <div>
+        {/* Existing product form */}
         {products.map((product) =>
           activeTab === product.id.toString() ? (
             <ProductForm
@@ -60,9 +68,19 @@ const SectionThreeCategory = ({ categoryId }) => {
           ) : null
         )}
 
-        {activeTab === "new" && (
+        {/* New product form (only shown if activeTab is "new" and less than 4) */}
+        {activeTab === "new" && products.length < 4 && (
           <ProductForm key="new" categoryId={categoryId} productId={null} />
         )}
+
+        {/* Fallback: no valid tab selected */}
+        {activeTab &&
+          activeTab !== "new" &&
+          !products.some((p) => p.id.toString() === activeTab) && (
+            <div className="alert alert-info p-3 text-center">
+              Select a product from the tabs above.
+            </div>
+          )}
       </div>
     </div>
   );

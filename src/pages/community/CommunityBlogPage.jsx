@@ -29,17 +29,22 @@ const CommunityBlogPage = () => {
     <div className="community-container container-fluid">
       <HeroSection />
       <div className="row community-content-wrapper">
-        <div className="col-md-2">
+        {/* Sidebar */}
+        <div className="col-12 col-md-3 col-lg-2 mb-4">
           <BlogSidebar comunityBlogs={comunityBlogs} setId={setId} id={id} />
         </div>
-        <div className="col-md-7">
+
+        {/* Main Content */}
+        <div className="col-12 col-md-6 col-lg-7 mb-4">
           {Number(id) === 0 ? (
             <CommunityPosts />
           ) : (
             <BlogContent setId={setId} id={id} />
           )}
         </div>
-        <div className="col-md-3">
+
+        {/* More Posts */}
+        <div className="col-12 col-md-3 col-lg-3 mb-4">
           <MorePosts />
         </div>
       </div>

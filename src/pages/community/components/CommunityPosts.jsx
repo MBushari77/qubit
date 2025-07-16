@@ -1,67 +1,88 @@
-// src/components/CommunityPosts.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CommunityPosts.css";
+import API from "../../../utils/API";
 
 const CommunityPosts = () => {
-  const [showPostModal, setShowPostModal] = useState(false);
-  const [showCommentModal, setShowCommentModal] = useState(false);
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      author: "Auther name",
-      content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-      date: "2025-07-15T10:31:32.000Z",
-      comments: [
-        {
-          id: 1,
-          name: "Commenter name",
-          text: "Lorem Ipsum is simply dummy text of the printing...",
-          date: "2025-07-15T11:00:00.000Z",
-        },
-      ],
-    },
-  ]);
-
+  const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState({ author: "", content: "" });
   const [newComment, setNewComment] = useState({ name: "", text: "" });
+  const [showPostModal, setShowPostModal] = useState(false);
+  const [showCommentModal, setShowCommentModal] = useState(false);
   const [selectedPostId, setSelectedPostId] = useState(null);
   const [showAllComments, setShowAllComments] = useState(false);
 
-  const handleAddPost = () => {
-    const newEntry = {
-      id: posts.length + 1,
-      author: newPost.author,
-      content: newPost.content,
-      date: new Date().toISOString(),
-      comments: [],
+  // Fetch posts from API
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await API.get("/communityposts/posts");
+        setPosts(response.data);
+      } catch (error) {
+        console.error("Failed to fetch posts", error);
+      }
     };
-    setPosts([newEntry, ...posts]);
-    setNewPost({ author: "", content: "" });
-    setShowPostModal(false);
+    fetchPosts();
+  }, []);
+
+  // Add new post
+  const handleAddPost = async () => {
+    try {
+      console.log({
+        author_name: newPost.author,
+        content: newPost.content,
+      });
+      const response = await API.post("/communityposts/posts", {
+        author_name: newPost.author,
+        content: newPost.content,
+      });
+
+      setPosts([
+        {
+          ...response.data,
+          comments: [],
+          created_at: new Date().toISOString(),
+        },
+        ...posts,
+      ]);
+      setNewPost({ author: "", content: "" });
+      setShowPostModal(false);
+    } catch (error) {
+      console.error("Failed to create post", error);
+    }
   };
 
-  const handleAddComment = () => {
-    const updatedPosts = posts.map((post) => {
-      if (post.id === selectedPostId) {
-        return {
-          ...post,
-          comments: [
-            ...post.comments,
-            {
-              id: post.comments.length + 1,
-              name: newComment.name,
-              text: newComment.text,
-              date: new Date().toISOString(),
-            },
-          ],
-        };
-      }
-      return post;
-    });
-    setPosts(updatedPosts);
-    setNewComment({ name: "", text: "" });
-    setShowCommentModal(false);
+  // Add new comment
+  const handleAddComment = async () => {
+    try {
+      const response = await API.post(
+        `/communityposts/posts/${selectedPostId}/comments`,
+        {
+          commenter_name: newComment.name,
+          text: newComment.text,
+        }
+      );
+
+      const updatedPosts = posts.map((post) =>
+        post.id === selectedPostId
+          ? {
+              ...post,
+              comments: [
+                ...post.comments,
+                {
+                  ...response.data,
+                  created_at: new Date().toISOString(),
+                },
+              ],
+            }
+          : post
+      );
+
+      setPosts(updatedPosts);
+      setNewComment({ name: "", text: "" });
+      setShowCommentModal(false);
+    } catch (error) {
+      console.error("Failed to add comment", error);
+    }
   };
 
   const formatDate = (iso) =>
@@ -92,7 +113,7 @@ const CommunityPosts = () => {
               <span className="bi bi-person-fill" />
             </div>
             <div>
-              <strong>{post.author}</strong>
+              <strong>{post.author_name}</strong>
               <p>{post.content}</p>
               <div className="d-flex justify-content-between">
                 <div className="d-flex align-items-center gap-3">
@@ -110,16 +131,18 @@ const CommunityPosts = () => {
                     Add Comments <span className="bi bi-chat-dots" />
                   </button>
                 </div>
-                <small>{formatDate(post.date)}</small>
+                <div>
+                  <small>{formatDate(post.created_at)}</small>
+                </div>
               </div>
 
               {post.comments
                 .slice(0, showAllComments ? post.comments.length : 1)
                 .map((comment) => (
                   <div key={comment.id} className="community-posts-comment">
-                    <strong>{comment.name}</strong>
+                    <strong>{comment.commenter_name}</strong>
                     <p>{comment.text}</p>
-                    <small>{formatDate(comment.date)}</small>
+                    <small>{formatDate(comment.created_at)}</small>
                   </div>
                 ))}
 

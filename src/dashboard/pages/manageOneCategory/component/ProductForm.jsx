@@ -3,7 +3,7 @@ import API from "../../../../utils/API"; // Update to your Axios instance
 
 const ProductForm = ({ categoryId, productId }) => {
   const [product, setProduct] = useState({
-    category_id: categoryId || "",
+    category_id: categoryId,
     headline_one: "",
     image: null,
     icons: [""],
@@ -114,7 +114,10 @@ const ProductForm = ({ categoryId, productId }) => {
     API.post("/sectionthree", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     })
-      .then((res) => alert(res.data.message))
+      .then((res) => {
+        alert(res.data.message);
+        window.location.reload();
+      })
       .catch((err) => console.error(err));
   };
 

@@ -17,7 +17,7 @@ const CategorySlider = ({ catId }) => {
         setCategories(res.data);
       })
       .catch(console.error);
-  }, []);
+  }, [catId]);
 
   if (!categories.length) return null;
 

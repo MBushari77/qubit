@@ -10,7 +10,7 @@ const BlogContent = ({ id, setId }) => {
     const fetchPost = async () => {
       try {
         const response = await API.get(`/communityonepost/${id}`);
-        console.log(response.data);
+
         setPost(response.data);
       } catch (error) {
         console.error("Failed to fetch Post:", error);
