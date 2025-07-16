@@ -41,8 +41,12 @@ const CategoryProducts = ({ categoryId }) => {
         {products.map((product, index) => (
           <div key={index} className="col-md-3 mb-4">
             <div className="category-products-card text-center">
-              <h5 className="category-products-title">
+              <h6 className="category-products-tagline">
                 {product.headline_one}
+              </h6>
+
+              <h5 className="category-products-title">
+                {product.headline_two}
               </h5>
 
               <img
@@ -51,15 +55,11 @@ const CategoryProducts = ({ categoryId }) => {
                 className="category-products-main-image mb-3"
               />
 
-              <div className="category-products-dots mb-2">
-                {JSON.parse(product.icons).map((icon, i) => (
-                  <span key={i} className={`bi bi-${icon}`} />
-                ))}
+              <div className="category-products-name">
+                {product.headline_three}
               </div>
+              <p className="category-products-desc">{product.description}</p>
 
-              <h6 className="category-products-tagline">
-                {product.headline_two}
-              </h6>
               <button className="home_prod_card_show_more_link category_hero_button category_product_page_button">
                 Learn More
               </button>
@@ -81,18 +81,20 @@ const CategoryProducts = ({ categoryId }) => {
                   ))}
                 </ul>
               </center>
-              <hr />
-
-              <p className="category-products-desc">{product.description}</p>
-
-              <div className="category-products-name">
-                {product.headline_three}
+              <div className="category-products-dots mb-2">
+                {JSON.parse(product.icons).map((icon, i) => (
+                  <span key={i} className={`bi bi-${icon}`} />
+                ))}
               </div>
+              {/* <hr /> */}
+
               <div className="category-products-sizes">
-                Available sizes: <div className="br" />
+                <h4> Available sizes</h4>
+                <p> {product.headline_two}</p>
+                <div className="br" />
                 {JSON.parse(product.sizes).map((size, i) => (
                   <span key={i} className="size_tag">
-                    {size}
+                    {size}"
                   </span>
                 ))}
               </div>
@@ -100,6 +102,7 @@ const CategoryProducts = ({ categoryId }) => {
               <p className="category-products-desc">{product.about}</p>
 
               <div className="category-products-thumbnails my-3">
+                <h6>Features</h6>
                 <div className="row g-1">
                   {JSON.parse(product.features).map((feature, i) => (
                     <div key={i} className="col-12">

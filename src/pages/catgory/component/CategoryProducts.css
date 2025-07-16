@@ -11,9 +11,10 @@
 
 .category-products-title {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
   margin-bottom: 1.5rem;
+  color: #878787;
 }
 
 .category-products-main-image {
@@ -32,12 +33,23 @@
 .category-products-dots span {
   margin-inline: 0.5rem;
   font-size: 1.5rem;
+  color: #00528d;
+}
+
+.category-products-dots span:last-child {
+  color: rgb(125, 90, 0);
+}
+.category-products-dots span:nth-child(2) {
+  color: rgb(0, 122, 6);
 }
 
 .size_tag {
   margin-inline: 0.5rem;
-  background-color: lightgray;
-  padding: 0.2rem;
+  background-color: #0398ff;
+  color: white;
+  padding: 0.5rem;
+  line-height: 1rem;
+  font-size: 1rem;
   padding-inline: 1rem;
   border-radius: 5rem;
   margin: 0.5rem;
@@ -46,12 +58,13 @@
 
 .category-products-tagline {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
   margin: 8px 0;
+  color: rgb(100, 100, 100);
 }
 
 .category-products-desc {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #3b3b3b;
   margin-bottom: 10px;
   /* text-align: justify; */
@@ -60,19 +73,36 @@
 }
 
 .category-products-name {
+  font-size: 1.1rem;
   font-weight: bold;
   margin-top: 10px;
+  height: 2rem;
+  color: #5c5c5c;
 }
 
 .category-products-sizes {
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 10px;
+  border-top: dashed 3px #0398ff;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .category-products-sizes .br {
   height: 1rem;
   display: block;
+}
+
+.category-products-sizes h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  /* margin: 0px; */
+}
+
+.category-products-sizes p {
+  font-size: 1rem;
+  margin: 0px;
 }
 
 .category-products-wrapper hr {
@@ -86,6 +116,12 @@
   padding: 15%;
   padding-block: 0px;
   border-radius: 8px;
+}
+
+.category-products-thumbnails h6 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #5c5c5c;
 }
 
 .category-products-thumb-box {
@@ -108,7 +144,7 @@
 }
 
 .category-products-thumb-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem !important;
   font-weight: 600;
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -131,5 +167,6 @@
 }
 .category_product_page_button {
   margin-block: 1rem;
-  width: 90%;
+  width: fit-content;
+  background-color: #0398ff;
 }
