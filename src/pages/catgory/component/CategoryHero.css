@@ -22,7 +22,7 @@
 .category-hero-product-card img {
   height: 15rem;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .category-hero-image {

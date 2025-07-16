@@ -43,9 +43,9 @@ const SectionOneCategory = ({ categoryId }) => {
   useEffect(() => {
     if (!categoryId) return;
 
-    API.get(`/sectionone/${categoryId}`)
+    API.get(`/sectionone/category/${categoryId}`)
       .then((res) => {
-        const data = res.data;
+        const data = res.data[0];
         if (!data || Object.keys(data).length === 0) {
           setIsExisting(false);
           return;

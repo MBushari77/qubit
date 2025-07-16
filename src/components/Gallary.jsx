@@ -36,7 +36,7 @@ const Gallary = ({ backgrounds }) => {
               <div className="home_prod_card_info">
                 <div className="home_prod_card_show_more">
                   <div>
-                    <div>
+                    <div className={`category_gallary_${index}`}>
                       {" "}
                       <h3
                         className="card_info_name"

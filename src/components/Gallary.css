@@ -1,0 +1,54 @@
+.home_prod_card {
+  position: relative; /* required for absolute children */
+}
+
+.category_gallary_0,
+.category_gallary_1,
+.category_gallary_2 {
+  position: absolute;
+  top: 1rem;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+}
+
+.category_gallary_3 {
+  position: absolute;
+  right: 2rem;
+  background-color: aqua;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category_gallary_4 {
+  position: absolute;
+  left: 2rem;
+  background-color: aqua;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category_gallary_5 {
+  position: absolute;
+  right: 2rem;
+  background-color: aqua;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.category_gallary_6 {
+  position: absolute;
+  left: 2rem;
+  background-color: aqua;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
