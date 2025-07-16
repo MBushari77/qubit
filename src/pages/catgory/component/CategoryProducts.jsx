@@ -39,15 +39,15 @@ const CategoryProducts = ({ categoryId }) => {
     <div className="container category-products-wrapper py-5">
       <div className="row">
         {products.map((product, index) => (
-          <div key={index} className="col-md-3 mb-4">
+          <div key={index} className="col-md-4 mb-4">
             <div className="category-products-card text-center">
               <h6 className="category-products-tagline">
                 {product.headline_one}
               </h6>
 
-              <h5 className="category-products-title">
+              <span className="category-products-title">
                 {product.headline_two}
-              </h5>
+              </span>
 
               <img
                 src={`${BaseAPI}/${product.image}`}
@@ -67,17 +67,10 @@ const CategoryProducts = ({ categoryId }) => {
               <center>
                 <ul
                   className="category-products-features list-unstyled"
-                  style={{ width: "fit-content" }}
+                  style={{ width: "fit-content", textAlign: "center" }}
                 >
                   {JSON.parse(product.advantages).map((adv, i) => (
-                    <li key={i}>
-                      <span
-                        className={`bi bi-${
-                          adv.value ? "check-circle" : "slash-circle"
-                        }`}
-                      />{" "}
-                      {adv.name}
-                    </li>
+                    <i key={i}>{adv.name}</i>
                   ))}
                 </ul>
               </center>
@@ -90,7 +83,7 @@ const CategoryProducts = ({ categoryId }) => {
 
               <div className="category-products-sizes">
                 <h4> Available sizes</h4>
-                <p> {product.headline_two}</p>
+                <div className="p"> {product.headline_two}</div>
                 <div className="br" />
                 {JSON.parse(product.sizes).map((size, i) => (
                   <span key={i} className="size_tag">
@@ -116,6 +109,7 @@ const CategoryProducts = ({ categoryId }) => {
                           {feature.title}
                         </div>
                       </div>
+                      <div className="category-products-thumb-box-hr" />
                     </div>
                   ))}
                 </div>

@@ -139,8 +139,10 @@ const SectionOneCategory = ({ categoryId }) => {
     setProducts(updated);
   };
 
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const formData = new FormData();
     formData.append("category_id", categoryId);
@@ -191,10 +193,12 @@ const SectionOneCategory = ({ categoryId }) => {
             ? "Section updated successfully!"
             : "Section added successfully!"
         );
+        setLoading(false);
       })
       .catch((err) => {
         console.error("Error saving section one:", err);
         alert("Error occurred while saving data.");
+        setLoading(false);
       });
   };
 
@@ -334,9 +338,15 @@ const SectionOneCategory = ({ categoryId }) => {
         </div>
       ))}
 
-      <button type="submit" className="btn btn-primary mt-4">
-        {isExisting ? "Update Section" : "Add Section"}
-      </button>
+      {loading ? (
+        <button className="btn btn-primary mt-4" type="button" disabled={true}>
+          Wait ...
+        </button>
+      ) : (
+        <button type="submit" className="btn btn-primary mt-4">
+          {isExisting ? "Update Section" : "Add Section"}
+        </button>
+      )}
     </form>
   );
 };
