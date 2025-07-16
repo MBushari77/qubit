@@ -13,7 +13,7 @@ const SectionTwoCategory = ({ categoryId }) => {
     // fetch section two for this category on mount
     if (!categoryId) return;
 
-    API.get(`/sectiontwo?category_id=${categoryId}`)
+    API.get(`/sectiontwo/category/${categoryId}`)
       .then((res) => {
         if (res.data.length > 0) {
           const data = res.data[0];

@@ -38,18 +38,20 @@ const Gallary = ({ backgrounds }) => {
                   <div>
                     <div className={`category_gallary_${index}`}>
                       {" "}
-                      <h3
-                        className="card_info_name"
-                        style={{ color: bg.color || colors[index % 2] }}
-                      >
-                        {bg.title}
-                      </h3>
-                      <i
-                        className="card_info_description"
-                        style={{ color: bg.color || colors[index % 2] }}
-                      >
-                        {bg.info}
-                      </i>
+                      <div>
+                        <h3
+                          className="card_info_name"
+                          style={{ color: bg.color || colors[index % 2] }}
+                        >
+                          {bg?.title.length < 2 ? "" : bg?.title}
+                        </h3>
+                        <i
+                          className="card_info_description"
+                          style={{ color: bg.color || colors[index % 2] }}
+                        >
+                          {bg.info}
+                        </i>
+                      </div>
                     </div>
                     <button
                       className="home_prod_card_show_more_link"
