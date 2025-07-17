@@ -12,7 +12,7 @@ const ProductContentCards = ({ cardsData }) => {
           Designed to make <br />a differnce{" "}
         </h1>
       </center>
-      <div className="row">
+      <div className="row content-cards-inner-container">
         {cardsData.map((card, index) => (
           <div className="col-md-4 mb-4" key={index}>
             <div className="product-content-cards-card text-center">
