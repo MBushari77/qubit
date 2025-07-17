@@ -28,7 +28,7 @@ const CategorySlider = ({ catId }) => {
           <div
             key={cat.id}
             className="category-slider-custom-item"
-            onClick={() => navigate(`/category/${cat.id}`)}
+            onClick={() => navigate(`/sub-category/${cat.id}`)}
           >
             <img
               src={`${BaseAPI}/uploads/${cat.icon}`}
