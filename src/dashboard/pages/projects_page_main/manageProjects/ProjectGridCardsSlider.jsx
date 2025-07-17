@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../../../../utils/API";
 import BaseAPI from "../../../../utils/BaseAPI";
 
-const ProjectCycle = () => {
+const ProjectGridCardsSlider = () => {
   const [items, setItems] = useState([]);
   const [form, setForm] = useState({
     id: null,
@@ -16,7 +16,7 @@ const ProjectCycle = () => {
 
   const fetchItems = async () => {
     try {
-      const res = await API.get(`/projectcycle`);
+      const res = await API.get(`/projegridctcontent`);
       console.log(res.data);
       setItems(res.data || []);
     } catch (err) {
@@ -70,6 +70,7 @@ const ProjectCycle = () => {
       return;
     }
 
+    // console.log([form.title, form.text, form.path]);
     const formData = new FormData();
     formData.append("title", form.title);
     formData.append("text", form.text);
@@ -79,10 +80,10 @@ const ProjectCycle = () => {
 
     try {
       if (form.id) {
-        await API.put(`/projectcycle/${form.id}`, formData);
+        await API.put(`/projegridctcontent/${form.id}`, formData);
         alert("Item updated");
       } else {
-        await API.post(`/projectcycle`, formData);
+        await API.post(`/projegridctcontent`, formData);
         alert("Item added");
       }
       setModalOpen(false);
@@ -95,7 +96,7 @@ const ProjectCycle = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this item?")) return;
     try {
-      await API.delete(`/projectcycle/${id}`);
+      await API.delete(`/projegridctcontent/${id}`);
       fetchItems();
     } catch (err) {
       alert("Failed to delete item");
@@ -104,7 +105,7 @@ const ProjectCycle = () => {
 
   return (
     <div className="container py-4">
-      <h4 className="mb-3">Project Media Section</h4>
+      <h4 className="mb-3">Project Blogs Section</h4>
       <button className="btn btn-primary mb-3" onClick={() => openModal(null)}>
         + Add New
       </button>
@@ -199,7 +200,7 @@ const ProjectCycle = () => {
       )}
 
       <div className="row">
-        {items.map((item) => (
+        {items?.map((item) => (
           <div className="col-md-4 mb-4" key={item.id}>
             <div className="card h-100">
               {item.icon && (
@@ -239,4 +240,4 @@ const ProjectCycle = () => {
   );
 };
 
-export default ProjectCycle;
+export default ProjectGridCardsSlider;

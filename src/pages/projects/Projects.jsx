@@ -7,6 +7,11 @@ import ProjectsProducts from "./components/ProjectsProducts";
 import LogoSlider from "./components/LogoSlider";
 import ProductBigSlider from "../product/components/ProductBigSlider";
 import QuestionSection from "../product/components/QuestionSection";
+import CrewGrid from "./components/CrewGrid";
+import ProjectsMainSlider from "./components/ProjectsMainSlider";
+import MediaOnProjectPage from "./components/MediaOnProjectPage";
+import ProjectBigCards from "./components/ProjectBigCards";
+import ProjectCardsGrid from "./components/ProdjctCardsGrid";
 
 const Projects = () => {
   const [ticketSlider, setTicketSlider] = useState([]);
@@ -87,19 +92,42 @@ const Projects = () => {
     fetchTicketSlider();
   }, []);
 
+  const [content, setContent] = useState([]);
+  useEffect(() => {
+    const fetchTicketSlider = async () => {
+      try {
+        const response = await API.get(`/projectcontentslider`);
+        setContent(response.data.sliders);
+      } catch (error) {
+        console.error("Failed to fetch ticket slider:", error);
+      }
+    };
+    fetchTicketSlider();
+  }, []);
+
   return (
     <>
       <div className="projects_page_container">
-        <CardSlider slides={ticketSlider} />
-        <RoadMap roadmapData={roadmapData} />
-        <ProjectsProducts />
+        <div className="crew-title">
+          <span>OUR CREW</span>
+        </div>
+        <CrewGrid slides={ticketSlider} />
+        {/* <CardSlider slides={ticketSlider} /> */}
+        <ProjectsMainSlider slides={content} />
+        {/* <RoadMap roadmapData={roadmapData} /> */}
+        <MediaOnProjectPage media={roadmapData} />
+
+        {/* <ProjectsProducts /> */}
         <LogoSlider logos={logos} />
+        <br />
+        <ProjectBigCards slides={blogs} />
+        <ProjectCardsGrid />
       </div>
+
       <ProductBigSlider slides={otherProjects} />
       {/* <ProjectQuestions /> */}
       <div className="project_black_section">
         <QuestionSection questionData={projectsQuestion} />
-        <ProductBigSlider slides={blogs} />
       </div>
     </>
   );

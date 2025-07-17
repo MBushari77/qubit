@@ -31,11 +31,19 @@
   margin-inline: 3rem;
 }
 .project_black_section {
-  background-color: black;
+  background-color: #f7f5f7;
   padding-block: 4rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 .project_black_section .swiper-backface-hidden .swiper-slide {
   width: 90rem !important;
+}
+
+.project_black_section .question-section-question {
+  color: rgb(66, 66, 66);
+}
+
+.project_black_section .question-section-answer p {
+  color: dimgray;
 }

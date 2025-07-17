@@ -38,8 +38,7 @@ const ProductMediaGrid = ({ product, gridContent }) => {
                   {feature.title}
                 </h4>
                 <p className="product-media-grid-feature-desc">
-                  {feature.description ||
-                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."}
+                  {feature.text}
                 </p>
               </div>
             </div>

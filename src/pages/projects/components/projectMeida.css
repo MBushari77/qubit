@@ -1,0 +1,13 @@
+.project-category-video-wrapper {
+  padding: 0px;
+  width: 100% !important;
+}
+.category-video-card {
+  padding: 0px;
+}
+
+.category-video-card video {
+}
+.category-video-media {
+  border-radius: 0px !important;
+}

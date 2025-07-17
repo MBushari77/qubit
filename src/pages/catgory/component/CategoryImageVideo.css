@@ -36,3 +36,6 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.project-video-title {
+  padding-inline: 10%;
+}

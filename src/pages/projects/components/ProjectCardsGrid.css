@@ -1,0 +1,121 @@
+.project-cards-grid {
+  height: 110vh;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  padding-inline: 10%;
+  background-color: lightgray;
+}
+
+.project-cards-grid .card-block {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-cards-grid .card-block:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.project-cards-grid .card-block h5,
+.project-cards-grid .card-block h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-cards-grid .card-block p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.project-cards-grid .row > div {
+  padding: 0.5rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .project-cards-grid {
+    height: auto;
+  }
+
+  .project-cards-grid .row > div {
+    padding: 0.75rem 0;
+  }
+
+  .project-cards-grid .card-block {
+    height: auto;
+  }
+}
+.margin-top-zero {
+  padding-top: 0px !important;
+}
+
+.grid-card-icon-numbered {
+  background-color: #333;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.project-cards-grid .why-qubit-card {
+  border: none !important;
+}
+.project-cards-container-bottom .why-qubit-card {
+  width: 20.5rem;
+}
+.margin-top-zero .why-qubit-card {
+  height: 83% !important;
+  justify-content: start;
+}
+.project-cards-grid {
+  background-color: #f5f5f7;
+}
+
+.project-cards-grid .swiper-bottom-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.project-cards-grid .custom-swiper .swiper-button-prev,
+.project-cards-grid .custom-swiper .swiper-button-next {
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+
+.project-cards-grid .custom-swiper .swiper-button-disabled {
+  opacity: 0.3;
+}
+
+.projects_page_container .swiper-backface-hidden .swiper-slide {
+  margin-left: 0px;
+  margin-right: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .project-cards-grid {
+    padding: 1rem;
+  }
+
+  .project-cards-grid .row {
+    flex-direction: column;
+  }
+
+  .project-cards-grid .col-md-6 {
+    width: 100%;
+  }
+}

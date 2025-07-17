@@ -14,6 +14,7 @@ const ProductBigSlider = ({ slides }) => {
   return (
     <div className="product-big-slider-container">
       <h3 className="product-big-slider-title-container"></h3>
+
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         slidesPerView={1.2}

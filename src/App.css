@@ -16,3 +16,6 @@ body {
 .card-text {
   color: dimgray !important;
 }
+.question-section-block:last-child {
+  border-bottom-color: white !important;
+}

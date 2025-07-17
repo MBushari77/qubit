@@ -81,5 +81,7 @@
   color: #9a9a9a; /* lighter gray for contrast */
   margin: 0;
   text-align: justify;
+  min-width: 40rem !important;
+  display: inline-block;
   /* margin-bottom: 3rem; */
 }

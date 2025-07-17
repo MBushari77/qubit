@@ -70,7 +70,9 @@ const CategoryProducts = ({ categoryId }) => {
                   style={{ width: "fit-content", textAlign: "center" }}
                 >
                   {JSON.parse(product.advantages).map((adv, i) => (
-                    <i key={i}>{adv.name}</i>
+                    <i key={i}>
+                      {adv.name} <br />
+                    </i>
                   ))}
                 </ul>
               </center>

@@ -7,6 +7,8 @@ import ProjectTeamMembers from "./ProjectTeamMembers";
 import ProjectQuestions from "./ProjectQuestions";
 import ProjectBlogs from "./ProjectBlogs";
 import ProjectProducts from "./ProjectProducts";
+import AddProjectContent from "./AddProjectContent";
+import ProjectGridCardsSlider from "./ProjectGridCardsSlider";
 
 // Project management section forms
 
@@ -20,20 +22,32 @@ const ManageProjects = () => {
       component: <ProjectCrew />,
     },
     {
-      title: "Project Cycle",
+      title: "Project Content slider",
+      component: <AddProjectContent />,
+    },
+    {
+      title: "Project Media",
       component: <ProjectCycle />,
     },
     {
       title: "Project Clients Logos",
       component: <ProjectClientsLogos />,
     },
+    // {
+    //   title: "Compare products",
+    //   component: <ProjectProducts />,
+    // },
     {
-      title: "Compare products",
-      component: <ProjectProducts />,
+      title: "Project Grid Content",
+      component: <ProjectGridCardsSlider />,
     },
     {
-      title: "Previous Projects",
-      component: <ProjectPreProjects />,
+      title: "Project Big cards",
+      component: <ProjectBlogs />,
+    },
+    {
+      title: "Big Cards Slider - Previous Projects",
+      component: <ProjectPreProjects />, //big slider
     },
     {
       title: "Team Members",
@@ -42,10 +56,6 @@ const ManageProjects = () => {
     {
       title: "Project Questions",
       component: <ProjectQuestions />,
-    },
-    {
-      title: "Project Blogs",
-      component: <ProjectBlogs />,
     },
   ];
 
