@@ -37,7 +37,8 @@
 }
 
 .product-media-grid-image {
-  max-width: 100%;
+  width: 100%;
+  /* max-width: 30rem; */
   height: auto;
 }
 
@@ -46,6 +47,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem 5rem;
+  width: 50%;
 }
 .product-media-grid-features-container {
   background-color: #ccc;
@@ -81,7 +83,7 @@
   color: #9a9a9a; /* lighter gray for contrast */
   margin: 0;
   text-align: justify;
-  min-width: 40rem !important;
+  min-width: 0rem !important;
   display: inline-block;
   /* margin-bottom: 3rem; */
 }
