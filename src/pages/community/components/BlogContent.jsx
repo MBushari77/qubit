@@ -3,7 +3,7 @@ import { BsShareFill } from "react-icons/bs";
 import API from "../../../utils/API";
 import BaseAPI from "../../../utils/BaseAPI";
 
-const BlogContent = ({ id, setId }) => {
+const BlogContent = ({ comunityBlogs, id, setId }) => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -67,7 +67,9 @@ const BlogContent = ({ id, setId }) => {
   return (
     <div className="community-blog-content">
       <div className="d-flex justify-content-between align-items-center">
-        <h2>COB Technology {id}</h2>
+        <div>
+          <h2>{comunityBlogs[id - 1].name}</h2>
+        </div>
         <div>
           <button className="community-share-btn" onClick={handleShare}>
             Share <BsShareFill />
@@ -81,6 +83,9 @@ const BlogContent = ({ id, setId }) => {
         </div>
       </div>
       <br />
+      <div className="community_banner_image">
+        <img src={`${BaseAPI}/uploads/${comunityBlogs[id - 1].icon}`} />
+      </div>
       {/* <p>asdasd</p> */}
       {content?.map((section, idx) => (
         <div key={idx} className="community_images">

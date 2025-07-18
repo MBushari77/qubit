@@ -16,6 +16,7 @@ import ManageOneSubCategory from "./pages/manageSubCategory/ManageOneSubCategory
 import AddProject from "./pages/projects_page_main/AddProject";
 import ManageCommunity from "./pages/community_page_main/ManageCommunity";
 import ManageOneSubCommunityPost from "./pages/manageOneCommunityPost/ManageOneSubCommunityPost";
+import SubCategoryBlogs from "./pages/subCategoryBlogs/SubCategoryBlogs";
 
 const DashboardRoutes = () => {
   return (
@@ -42,6 +43,7 @@ const DashboardRoutes = () => {
         <Route path="/projects" element={<AddProject />} />
         {/* Community */}
         <Route path="/community" element={<ManageCommunity />} />
+        <Route path="/community_blogs" element={<SubCategoryBlogs />} />
         <Route
           path="/community/post/:id"
           element={<ManageOneSubCommunityPost />}

@@ -47,3 +47,27 @@
 .project_black_section .question-section-answer p {
   color: dimgray;
 }
+.project_callendar_container .hero-slider-card {
+  position: relative;
+  width: fit-content !important;
+}
+
+.project_callendar_container {
+  background-image: url("https://www.colorlitled.com/wp-content/uploads/2024/07/led-display-solutions.webp");
+  padding: 3rem;
+  border-radius: 1.8rem;
+  margin-inline: 7%;
+  margin-block: 2rem;
+}
+.project_callendar_container .col-lg-6 {
+  display: flex;
+  justify-content: end;
+}
+
+.project_callendar_container .hero-slider-card {
+  border-radius: 1.8rem !important;
+}
+
+.event-calendar {
+  border-radius: 2rem;
+}

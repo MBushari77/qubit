@@ -142,3 +142,9 @@
   padding-top: 1.5rem;
   margin-top: 2rem;
 }
+.community_banner_image img {
+  width: 100% !important;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 1.8rem;
+}

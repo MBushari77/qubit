@@ -1,19 +1,26 @@
 import React from "react";
+import BaseAPI from "../../../utils/BaseAPI";
+import { useNavigate } from "react-router-dom";
 
-const MorePosts = () => {
+const MorePosts = ({ sideBlogs }) => {
+  const navigate = useNavigate();
   return (
     <div className="community-more-posts">
       <h4>More Blog Posts</h4>
-      {[...Array(4)].map((_, idx) => (
-        <div key={idx} className="community-post-item d-flex">
+      {sideBlogs.map((blog, idx) => (
+        <div
+          key={idx}
+          className="community-post-item d-flex"
+          onClick={() => navigate(blog.path)}
+        >
           <img
-            src={`https://eds.ae/wp-content/uploads/2024/06/LED-Video-Wall-1.jpg`}
-            alt="post"
+            src={`${BaseAPI}/uploads/${blog?.icon}`}
+            alt={blog?.title}
             className="community-post-thumb"
           />
           <div className="community-post-text">
-            <h6>Post Title</h6>
-            <p>Lorem Ipsum is simply dummy.</p>
+            <h6>{blog?.title}</h6>
+            <p>{blog?.text}</p>
           </div>
         </div>
       ))}

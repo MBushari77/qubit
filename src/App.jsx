@@ -11,9 +11,11 @@ import SubCategory from "./pages/subCategory/SubCategory";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contactUs/Contact";
 import CommunityBlogPage from "./pages/community/CommunityBlogPage";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

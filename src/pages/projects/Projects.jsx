@@ -12,6 +12,7 @@ import ProjectsMainSlider from "./components/ProjectsMainSlider";
 import MediaOnProjectPage from "./components/MediaOnProjectPage";
 import ProjectBigCards from "./components/ProjectBigCards";
 import ProjectCardsGrid from "./components/ProdjctCardsGrid";
+import ProjectCallender from "./components/ProjectCallender";
 
 const Projects = () => {
   const [ticketSlider, setTicketSlider] = useState([]);
@@ -116,13 +117,13 @@ const Projects = () => {
         <ProjectsMainSlider slides={content} />
         {/* <RoadMap roadmapData={roadmapData} /> */}
         <MediaOnProjectPage media={roadmapData} />
-
         {/* <ProjectsProducts /> */}
         <LogoSlider logos={logos} />
         <br />
         <ProjectBigCards slides={blogs} />
         <ProjectCardsGrid />
       </div>
+      <ProjectCallender />
 
       <ProductBigSlider slides={otherProjects} />
       {/* <ProjectQuestions /> */}

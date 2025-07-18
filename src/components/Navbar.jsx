@@ -80,7 +80,7 @@ const Navbar = () => {
         >
           <li className="main-nav-item">
             <Link to="/" className="main-nav-logo">
-              <img src={logo} alt="" srcset="" />
+              <img src={logo} alt="" />
             </Link>
           </li>{" "}
           <li className="main-nav-item">

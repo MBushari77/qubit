@@ -32,6 +32,7 @@ const DashboardLayout = () => {
                 Sub Categories
               </Link>
             </li>
+
             <li className="nav-item">
               <Link to="/dashboard/products" className="nav-link">
                 Products
@@ -45,6 +46,11 @@ const DashboardLayout = () => {
             <li className="nav-item">
               <Link to="/dashboard/community" className="nav-link">
                 Community
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/dashboard/community_blogs" className="nav-link">
+                Communit Blogs
               </Link>
             </li>
           </ul>

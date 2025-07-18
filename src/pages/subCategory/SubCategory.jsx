@@ -9,9 +9,28 @@ import SubCategoryGrid from "./components/SubCategoryGrid";
 
 import ProductCardSlider from "../product/components/ProductCardSlider";
 import QuestionSection from "../product/components/QuestionSection";
+import SubCategoryProductsNav from "./components/SubCategoryProductsNav";
 
 const SubCategory = () => {
   const { id } = useParams();
+  const [subCategoryProducts, setSubCategoryProducts] = useState([]);
+  useEffect(() => {
+    const fetchSubCategoryProducts = async () => {
+      try {
+        const response = await API.get(`/subcategoryproducts/${id}`);
+        console.log(response.data);
+        setSubCategoryProducts(response.data);
+      } catch (error) {
+        console.error("Failed to fetch subcategory products:", error);
+      }
+    };
+    if (id) {
+      fetchSubCategoryProducts();
+    }
+  }, [id]);
+
+  //
+
   const [subCategory, setSubCategory] = useState([]);
   useEffect(() => {
     const fetchSubCategory = async () => {
@@ -116,6 +135,7 @@ const SubCategory = () => {
 
   return (
     <div className="sub_category_page_container">
+      <SubCategoryProductsNav subCatId={id} />
       <SubCategoryHeroSection subCategory={subCategory} />
       <ProductContentCards cardsData={sectionOneCards} />
       <ProductBigSlider slides={bigSliderContent} />

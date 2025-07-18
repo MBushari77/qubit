@@ -7,6 +7,7 @@ import SubCategorySectionTwoForm from "./components/SubCategorySectionTwoForm";
 import SubCategorySectionThreeForm from "./components/SubCategorySectionThreeForm";
 import SubCategorySectionFourForm from "./components/SubCategorySectionFourForm";
 import SubCategorySectionFiveForm from "./components/SubCategorySectionFiveForm";
+import SubCategoryProductsForm from "./components/SubCategoryProductsForm";
 
 const ManageOneSubCategory = () => {
   const { id } = useParams(); // sub_category ID
@@ -14,6 +15,10 @@ const ManageOneSubCategory = () => {
   const [activeSection, setActiveSection] = useState(null);
 
   const sections = [
+    {
+      title: "Navbar Products",
+      component: <SubCategoryProductsForm subCategoryId={id} />,
+    },
     {
       title: "Three Tickets",
       component: <SubCategorySectionOneForm subCategoryId={id} />,

@@ -25,6 +25,20 @@ const CommunityBlogPage = () => {
     fetchComunityBlogs();
   }, []);
 
+  // gr all from /community
+  const [comunitySideBlogs, setComunitySideBlogs] = useState([]);
+  useEffect(() => {
+    const fetchComunitySideBlogs = async () => {
+      try {
+        const response = await API.get(`/communitysideblogs`);
+        setComunitySideBlogs(response.data);
+      } catch (error) {
+        console.error("Failed to fetch ComunitySideBlogs:", error);
+      }
+    };
+    fetchComunitySideBlogs();
+  }, []);
+
   return (
     <div className="community-container container-fluid">
       <HeroSection />
@@ -39,13 +53,13 @@ const CommunityBlogPage = () => {
           {Number(id) === 0 ? (
             <CommunityPosts />
           ) : (
-            <BlogContent setId={setId} id={id} />
+            <BlogContent comunityBlogs={comunityBlogs} setId={setId} id={id} />
           )}
         </div>
 
         {/* More Posts */}
         <div className="col-12 col-md-3 col-lg-3 mb-4">
-          <MorePosts />
+          <MorePosts sideBlogs={comunitySideBlogs} />
         </div>
       </div>
     </div>
