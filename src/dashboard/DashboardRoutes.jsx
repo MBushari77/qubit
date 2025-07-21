@@ -17,6 +17,8 @@ import AddProject from "./pages/projects_page_main/AddProject";
 import ManageCommunity from "./pages/community_page_main/ManageCommunity";
 import ManageOneSubCommunityPost from "./pages/manageOneCommunityPost/ManageOneSubCommunityPost";
 import SubCategoryBlogs from "./pages/subCategoryBlogs/SubCategoryBlogs";
+import SingleProjectManager from "./pages/single_project_page_main/SingleProjectManager";
+import ManageOneProject from "./pages/manageOneProject/ManageOneProject";
 
 const DashboardRoutes = () => {
   return (
@@ -47,6 +49,12 @@ const DashboardRoutes = () => {
         <Route
           path="/community/post/:id"
           element={<ManageOneSubCommunityPost />}
+        />{" "}
+        {/* Single Project */}
+        <Route path="/single_project" element={<SingleProjectManager />} />
+        <Route
+          path="/manage_singel_project/:id"
+          element={<ManageOneProject />}
         />
       </Routes>
     </div>

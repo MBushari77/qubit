@@ -15,8 +15,7 @@ const Navbar = () => {
     const fetchCategories = async () => {
       try {
         const response = await API.get(`/category`);
-        console.log("Categories");
-        console.log(response.data);
+
         setCategories(response.data);
       } catch (error) {
         console.error("Failed to fetch Categories:", error);

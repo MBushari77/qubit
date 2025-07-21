@@ -12,6 +12,7 @@ import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contactUs/Contact";
 import CommunityBlogPage from "./pages/community/CommunityBlogPage";
 import ScrollToTop from "./components/ScrollToTop";
+import Project from "./pages/project/Project";
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/community" element={<CommunityBlogPage />} />
+        <Route path="/project/:id" element={<Project />} />
         {/* ####################################################### */}
         {/* ####################################################### */}
         {/* ####################################################### */}
