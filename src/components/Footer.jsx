@@ -21,18 +21,27 @@ const Footer = () => {
               <li>
                 <i className="fas fa-map-marker-alt me-2"></i>
                 <span>
-                  123 Business Avenue, Suite 100
+                  Office 6 , 5258 Anas Ibn Malik Road , Al Malqa District.
                   <br />
-                  New York, NY 10001
+                  Riyadh 13521-7479 , Saudi Arabia.
                 </span>
               </li>
               <li>
                 <i className="fas fa-phone me-2"></i>
-                <span>+1 (555) 123-4567</span>
+                <span>
+                  {" "}
+                  <a href="tel:+966550017112">
+                    <i className="bi bi-telephone" /> +966 55 001 7112
+                  </a>
+                </span>
               </li>
               <li>
                 <i className="fas fa-envelope me-2"></i>
-                <span>contact@yourbrand.com</span>
+                <span>
+                  <a href="mailto:contact@yourbrand.com">
+                    <i className="bi bi-envelope" /> contact@yourbrand.com
+                  </a>
+                </span>
               </li>
             </ul>
           </div>

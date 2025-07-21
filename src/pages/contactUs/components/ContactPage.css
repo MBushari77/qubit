@@ -18,18 +18,20 @@
   display: flex;
   width: 90%;
   padding-inline: 10rem;
-  height: 100vh;
+  /* height: 100vh; */
   background: var(--bg-color);
   overflow: hidden;
   font-family: "Helvetica Neue", sans-serif;
+  margin-block: 5rem;
 }
 
 .contact-left-col {
   width: 45vw;
-  height: 100%;
+  /* height: 100%; */
   background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
   background-size: cover;
   background-position: center;
+  border-radius: 1.9rem;
 }
 
 .contact-logo {
@@ -39,7 +41,7 @@
 
 .contact-right-col {
   width: 55vw;
-  height: 100vh;
+  /* height: 100vh; */
   background: var(--bg-color);
   padding: 5rem 3.5rem;
   position: relative;
@@ -114,6 +116,7 @@
   outline: none;
   cursor: pointer;
   font-family: "Jost", sans-serif;
+  border-radius: 0.6rem;
 }
 
 .contact-input:hover,

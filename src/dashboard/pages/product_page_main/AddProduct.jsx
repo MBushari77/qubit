@@ -145,6 +145,19 @@ const AddProduct = () => {
     }
   };
 
+  const addEditFeature = () => {
+    setEditForm({
+      ...editForm,
+      features: [...editForm.features, { title: "", image: null }],
+    });
+  };
+
+  const removeEditFeature = (index) => {
+    const updated = [...editForm.features];
+    updated.splice(index, 1);
+    setEditForm({ ...editForm, features: updated });
+  };
+
   return (
     <div className="container my-4">
       <h2 className="mb-4">Manage Products</h2>
@@ -308,7 +321,10 @@ const AddProduct = () => {
                 />
                 <h6>Features</h6>
                 {editForm.features.map((f, i) => (
-                  <div key={i} className="mb-2">
+                  <div
+                    key={i}
+                    className="mb-2 border rounded p-2 position-relative"
+                  >
                     <input
                       type="text"
                       value={f.title}
@@ -316,6 +332,7 @@ const AddProduct = () => {
                         handleEditFeatureChange(i, "title", e.target.value)
                       }
                       className="form-control mb-1"
+                      placeholder="Feature Title"
                     />
                     <input
                       type="file"
@@ -324,8 +341,23 @@ const AddProduct = () => {
                       }
                       className="form-control"
                     />
+                    <button
+                      type="button"
+                      className="btn btn-danger btn-sm position-absolute"
+                      style={{ top: "5px", right: "5px" }}
+                      onClick={() => removeEditFeature(i)}
+                    >
+                      ×
+                    </button>
                   </div>
                 ))}
+                <button
+                  type="button"
+                  className="btn btn-secondary my-2"
+                  onClick={addEditFeature}
+                >
+                  Add Feature
+                </button>
               </div>
               <div className="modal-footer">
                 <button

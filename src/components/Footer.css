@@ -34,6 +34,7 @@
 
 .footer-logo img {
   width: 50%;
+  filter: brightness(0%);
 }
 
 .footer-title {
@@ -65,6 +66,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-align: left;
+}
+
+.contact-info li a {
+  text-decoration: none;
+}
+
+.contact-info li .bi {
+  color: rgb(109, 109, 109) !important;
 }
 
 .contact-info i {
