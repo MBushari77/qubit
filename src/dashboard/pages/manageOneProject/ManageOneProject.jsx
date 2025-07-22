@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import API from "../../../utils/API";
 import BaseAPI from "../../../utils/BaseAPI";
 import SingleProjectContentForm from "./components/SingleProjectContentForm";
+import SingleProjectQuestionForm from "./components/SingleProjectQuestionForm";
 
 const ManageOneProject = () => {
   const { id } = useParams(); // project ID
@@ -11,21 +12,13 @@ const ManageOneProject = () => {
 
   const sections = [
     {
-      title: "Project Overview",
+      title: "Project Content",
       component: <SingleProjectContentForm category_id={id} />,
     },
-    // {
-    //   title: "Project Image Gallery",
-    //   component: <ProjectImagesForm projectId={id} />,
-    // },
-    // {
-    //   title: "Project Highlights",
-    //   component: <ProjectHighlightsForm projectId={id} />,
-    // },
-    // {
-    //   title: "Project Details & Metadata",
-    //   component: <ProjectDetailsForm projectId={id} />,
-    // },
+    {
+      title: "Project Questions",
+      component: <SingleProjectQuestionForm categoryId={id} />,
+    },
   ];
 
   useEffect(() => {

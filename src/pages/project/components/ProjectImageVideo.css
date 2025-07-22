@@ -1,0 +1,27 @@
+.single_project_page_container .category-video-wrapper {
+  margin-top: 5rem;
+}
+
+.single_project_page_container .category-video-title {
+  margin-bottom: 1.5rem;
+}
+.single_project_page_container .category-video-subtitle {
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+.category-video-info {
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.single_project_page_container .category-video-media {
+  background-color: white !important;
+  margin-bottom: 0rem !important;
+}
+.single_project_page_container .category-video-element {
+  border-radius: 1.8rem;
+}

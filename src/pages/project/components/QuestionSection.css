@@ -1,0 +1,10 @@
+.single_project_page_container .question-section-container * {
+  color: black;
+}
+.single_project_page_container
+  .question-section-container
+  .question-section-question
+  .bi {
+  left: 80%;
+  right: unset !important;
+}
