@@ -71,3 +71,6 @@
 .event-calendar {
   border-radius: 2rem;
 }
+.projects_page_container .swiper-slide {
+  width: 20rem !important;
+}

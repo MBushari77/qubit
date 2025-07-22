@@ -91,3 +91,19 @@
     max-width: 100%;
   }
 }
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3rem); /* move up */
+  }
+  100% {
+    transform: translateY(0); /* back to original */
+  }
+}
+
+.question-section-image.float-up-down {
+  animation: floatUpDown 3s ease-in-out infinite;
+}

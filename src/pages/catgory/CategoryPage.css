@@ -3,6 +3,62 @@
   background-color: #f0f0f0;
 }
 .questions_on_category {
-  padding-block: 5rem;
+  padding-bottom: 5rem;
   background-color: black !important;
+}
+
+@media (max-width: 768px) {
+  .category_page_container .question-section-question {
+    font-size: 0.9rem;
+  }
+  .question-section-question .bi {
+    left: unset !important;
+    right: 15% !important;
+  }
+  .question-section-answer p {
+    font-size: 0.7rem !important;
+  }
+}
+
+.animated-container {
+  perspective: 1000px;
+}
+
+.rotate-infinite {
+  animation: rotateBackAndForth 3s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+/* Keyframes for 3D rotate Y axis */
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotateY(5deg);
+  }
+  100% {
+    transform: rotateY(-5deg);
+  }
+}
+
+@keyframes rotateYBackAndForth {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(5deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(-5deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.rotate-infinite {
+  animation: rotateYBackAndForth 4s infinite ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }

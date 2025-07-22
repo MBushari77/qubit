@@ -55,7 +55,7 @@ const QuestionSection = ({ questionData }) => {
                   key={questionData[activeIndex].icon} // use key to trigger AnimatePresence
                   src={`${BaseAPI}/uploads/${questionData[activeIndex].icon}`}
                   alt="Related visual"
-                  className="question-section-image"
+                  className="question-section-image "
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}

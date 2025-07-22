@@ -13,6 +13,7 @@ import MediaOnProjectPage from "./components/MediaOnProjectPage";
 import ProjectBigCards from "./components/ProjectBigCards";
 import ProjectCardsGrid from "./components/ProdjctCardsGrid";
 import ProjectCallender from "./components/ProjectCallender";
+import ProjectContentSlides from "../project/components/ProjectContentSlides";
 
 const Projects = () => {
   const [ticketSlider, setTicketSlider] = useState([]);
@@ -125,7 +126,8 @@ const Projects = () => {
       </div>
       <ProjectCallender />
 
-      <ProductBigSlider slides={otherProjects} />
+      {/* <ProductBigSlider slides={otherProjects} /> */}
+      <ProjectContentSlides />
       {/* <ProjectQuestions /> */}
       <div className="project_black_section">
         <QuestionSection questionData={projectsQuestion} />

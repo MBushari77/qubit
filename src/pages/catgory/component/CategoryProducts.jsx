@@ -39,7 +39,12 @@ const CategoryProducts = ({ categoryId }) => {
     <div className="container category-products-wrapper py-5">
       <div className="row">
         {products.map((product, index) => (
-          <div key={index} className="col-md-4 mb-4">
+          <div
+            key={index}
+            className={`col-md-${products?.length === 4 ? "3" : "4"} col-lg-${
+              products?.length === 4 ? "3" : "4"
+            } col-sm-12 mb-4`}
+          >
             <div className="category-products-card text-center">
               <h6 className="category-products-tagline">
                 {product.headline_one}
@@ -89,7 +94,7 @@ const CategoryProducts = ({ categoryId }) => {
                 <div className="br" />
                 {JSON.parse(product.sizes).map((size, i) => (
                   <span key={i} className="size_tag">
-                    {size}"
+                    {size}
                   </span>
                 ))}
               </div>

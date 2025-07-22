@@ -43,7 +43,7 @@ const ProjectContentSlides = () => {
         }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} style={{ width: "90%", maxWidth: "26rem" }}>
             <div
               className="group-slider-card"
               style={{
