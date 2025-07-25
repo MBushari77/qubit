@@ -163,4 +163,9 @@
   .new-slider-nav.right {
     right: 20%;
   }
+  .new-slider-button {
+    padding: 0.4rem 1.5rem !important;
+    font-weight: 100 !important;
+    font-size: 0.9rem;
+  }
 }

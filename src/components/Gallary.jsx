@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Gallary.css";
 import BaseAPI from "../utils/BaseAPI";
+import { Link, useNavigate } from "react-router-dom";
 
 const grid = [4, 4, 4, 8, 4, 4, 8];
 const colors = ["white", "black"];
@@ -8,10 +9,11 @@ const colors = ["white", "black"];
 const Gallary = ({ backgrounds }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProduct, setActiveProduct] = useState(null);
+  const navigate = useNavigate();
 
   const handleLearnMore = (index) => {
-    setActiveProduct(index);
-    setModalOpen(true);
+    navigate(index);
+    // setModalOpen(true);
   };
 
   const closeModal = () => {
@@ -53,12 +55,11 @@ const Gallary = ({ backgrounds }) => {
                         </i>
                       </div>
                     </div>
-                    <button
-                      className="home_prod_card_show_more_link"
-                      onClick={() => handleLearnMore(index)}
-                    >
-                      Learn More
-                    </button>
+                    <Link to={bg.path}>
+                      <button className="home_prod_card_show_more_link">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -95,9 +95,9 @@ const CommunityPosts = () => {
     });
 
   return (
-    <div className="community-posts-container container">
+    <div className="community-posts-container container comuunity_posts_continer">
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <h3>Qubit Community Posts</h3>
+        <h3>Community Posts</h3>
         <button
           onClick={() => setShowPostModal(true)}
           className="community-posts-add-btn"
@@ -115,7 +115,7 @@ const CommunityPosts = () => {
             <div>
               <strong>{post.author_name}</strong>
               <p>{post.content}</p>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between comuunity_posts_continer_grid">
                 <div className="d-flex align-items-center gap-3">
                   <span>
                     <span className="bi bi-chat-right-text" /> Comments{" "}
@@ -151,7 +151,7 @@ const CommunityPosts = () => {
                   className="community-posts-toggle-btn"
                   onClick={() => setShowAllComments(!showAllComments)}
                 >
-                  {showAllComments ? "Show Less" : "Load More"}
+                  {showAllComments ? "Show Less" : "Show More"}
                 </button>
               )}
             </div>

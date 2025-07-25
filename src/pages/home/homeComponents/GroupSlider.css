@@ -138,6 +138,10 @@ body {
   .group-slider-title-container {
     font-size: 1.8rem;
   }
+  .swiper-backface-hidden .swiper-slide {
+    width: 14rem !important;
+    max-width: 14rem !important;
+  }
 }
 
 @media (max-width: 576px) {

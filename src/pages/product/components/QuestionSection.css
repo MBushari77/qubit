@@ -37,6 +37,11 @@
   /* background-color: #cccccc; */
 }
 
+.question-section-question i {
+  display: inline-block;
+  width: 85%;
+}
+
 .question-section-question .bi {
   position: absolute;
   left: 46%;
@@ -80,6 +85,8 @@
   .question-section-container {
     flex-direction: column-reverse;
     align-items: center;
+    padding: 0.5rem;
+    margin-inline: 1rem;
   }
 
   .question-section-left,
@@ -89,6 +96,13 @@
 
   .question-section-image {
     max-width: 100%;
+  }
+  .question-section-left {
+    padding-inline: 1rem;
+    padding-block: 0rem;
+  }
+  .question-section-question i {
+    font-size: 1rem;
   }
 }
 

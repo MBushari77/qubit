@@ -40,8 +40,16 @@ const CategoryHeroSection = ({ category_id }) => {
               {sectionOneData[0]?.product1_description}
             </p>
             <ul className="list-unstyled small mb-3">
-              <li>• {sectionOneData[0]?.product1_feature1}</li>
-              <li>• {sectionOneData[0]?.product1_feature2}</li>
+              <li>
+                {" "}
+                <span className="bi bi-box" />{" "}
+                {sectionOneData[0]?.product1_feature1}
+              </li>
+              <li>
+                {" "}
+                <span className="bi bi-box" />{" "}
+                {sectionOneData[0]?.product1_feature2}
+              </li>
             </ul>
             <center>
               <Link

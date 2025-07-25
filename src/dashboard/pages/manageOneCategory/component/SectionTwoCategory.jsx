@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../../../utils/API";
 
-const SectionTwoCategory = ({ categoryId }) => {
+const SectionTwoCategory = ({ categoryId, setActiveSection }) => {
   const [form, setForm] = useState({
     headline: "",
     file: null,
@@ -61,10 +61,12 @@ const SectionTwoCategory = ({ categoryId }) => {
         // Update existing record
         await API.put(`/sectiontwo/${existingData.id}`, formData);
         alert("Section Two updated successfully");
+        setActiveSection(null);
       } else {
         // Create new record
         await API.post("/sectiontwo", formData);
         alert("Section Two added successfully");
+        setActiveSection(null);
       }
     } catch (err) {
       console.error("Error saving section two:", err);

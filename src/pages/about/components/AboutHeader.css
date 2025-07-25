@@ -41,3 +41,22 @@
   background-color: white !important;
   color: black !important;
 }
+
+@media (max-width: 768px) {
+  .about_header {
+    margin-top: 0rem;
+  }
+  .about_header_content h1 {
+    font-size: 2rem;
+    padding-inline: 0.5rem;
+    font-weight: bold;
+  }
+  .about_header_content p {
+    font-size: 0.9rem;
+  }
+  .about_header_content button {
+    margin: 0.3rem;
+    padding: 0.2rem;
+    max-width: 8rem;
+  }
+}

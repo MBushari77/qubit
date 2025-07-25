@@ -20,6 +20,7 @@ import "./Tickets.css";
 // // import pdfs from assets
 // import pdf1 from "./pdfs/PixelBloom digital signage.pdf";
 import BaseAPI from "../../../utils/BaseAPI";
+import { Link } from "react-router-dom";
 
 // const bloom = [bloom2, bloom3, bloom4, bloom5, bloom6, bloom7, bloom8];
 // const backgrounds = [
@@ -154,12 +155,11 @@ const Tickets = ({ backgrounds }) => {
                         {bg.info}
                       </i>
                     </div>
-                    <button
-                      className="home_prod_card_show_more_link"
-                      onClick={() => handleLearnMore(index)}
-                    >
-                      Learn More
-                    </button>
+                    <Link to={bg.link}>
+                      <button className="home_prod_card_show_more_link">
+                        Learn More
+                      </button>
+                    </Link>
                     {/* <button className="home_prod_card_show_more_link home_prod_card_show_more_link2">
                       Brochure
                     </button> */}

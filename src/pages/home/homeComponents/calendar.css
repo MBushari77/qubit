@@ -6,6 +6,10 @@
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding-inline: 4rem;
+  background: rgba(255, 255, 255, 0.3) !important; /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blurry glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: none !important; /* Optional border for contrast */
 }
 
 .calendar-header {
@@ -24,10 +28,12 @@
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 .calendar-header h5 {
   font-size: 1rem;
   margin-bottom: 0rem !important;
+  color: whitesmoke;
 }
 .calendar-body {
   padding: 0.5rem;
@@ -46,6 +52,7 @@
 .weekdays div {
   padding: 0.5rem;
   /* border-right: 1px solid #ddd; */
+  color: white;
 }
 
 .weekdays div:last-child {
@@ -62,17 +69,19 @@
   text-align: center;
   padding: 0.75rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
   font-size: 0.8rem !important;
   margin: 0.1rem !important;
+  color: white;
+  border-radius: 0.5rem;
 }
 
 .day:hover {
-  background-color: #f5f5f5;
+  background-color: #75ae94;
 }
 
 .other-month {
-  color: #ccc;
+  color: gray;
 }
 
 .has-event {
@@ -147,6 +156,86 @@
 
 .calendar-form-input {
   padding-left: 2rem !important;
+  background-color: #f5f5f500;
+  color: black !important;
+}
+
+.calendar-form input {
+  color: white !important;
+}
+.calendar-form .bi {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input::placeholder {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input::-webkit-input-placeholder {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input:-ms-input-placeholder {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input::-moz-placeholder {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input:-moz-placeholder {
+  color: white !important;
+}
+
+.calendar-form .calendar-form-input {
+  color: white !important;
+}
+.calendar-form .calendar-form-input:focus {
+  color: white !important;
+  background-color: #f5f5f500;
+}
+/* Force white color for text and icons */
+.calendar-form input[type="time"] {
+  color: white;
+}
+
+/* WebKit browsers (Chrome, Safari) only */
+.calendar-form input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* makes dark icon white */
+  opacity: 1;
+}
+.calendar-form select {
+  color: white;
+  background-color: transparent;
+  appearance: none; /* Removes default arrow (works in most modern browsers) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  padding-right: 30px; /* Ensure space for arrow */
+  border: 1px solid white;
+}
+.calendar-form select {
+  color: white !important;
+  background-color: transparent; /* optional */
+}
+
+/* Style the placeholder-like option */
+.calendar-form select option[disabled] {
+  color: gray; /* or white if you want it to match */
+}
+/* Make selected text white */
+.calendar-form select {
+  color: white;
+  background-color: transparent;
+}
+
+/* Try to make dropdown options white (works in Firefox) */
+.calendar-form select option {
+  color: black;
+  background-color: white; /* optional */
 }
 
 .calendar-form-submit-btn {

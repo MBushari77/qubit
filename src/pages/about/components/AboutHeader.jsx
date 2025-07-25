@@ -6,13 +6,13 @@ const AboutHeader = () => {
   return (
     <div className="about_header">
       <div className="about_header_content">
-        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+        <h1>Crafting Experiences Through Intelligent Display Technology</h1>
         <p>
           <ReactTyped
-            words={[
-              "We build immersive experiences.",
-              "Customized visual solutions for your needs.",
-              "From concept to completion.",
+            strings={[
+              "KSA, UAE based experts in display solutions.",
+              "Custom solutions for unique installations.",
+              "From LEDs to kiosks, built to perform.",
             ]}
             loop={0}
             cursor

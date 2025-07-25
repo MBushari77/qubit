@@ -7,6 +7,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
+  background-color: #ffffff00 !important;
 }
 
 .category-video-title {
@@ -25,7 +26,7 @@
   margin: 0;
   border-radius: 2rem;
   overflow: hidden;
-  background-color: #000;
+  /* background-color: #000; */
   margin-bottom: 10rem;
 }
 
@@ -38,4 +39,7 @@
 }
 .project-video-title {
   padding-inline: 10%;
+}
+.category-video-card video {
+  border-radius: 1.8rem;
 }

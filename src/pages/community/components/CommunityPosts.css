@@ -58,8 +58,17 @@
   color: #007bff;
   cursor: pointer;
   font-weight: 500;
+  color: white;
+  background-color: #007bff;
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 0.8rem;
+  transition-duration: 0.1s !important;
 }
 
+.community-posts-toggle-btn:hover {
+  scale: 1.05;
+}
 .community-posts-modal {
   position: fixed;
   top: 0;
@@ -107,4 +116,63 @@
 .community-posts-modal-content button:last-child {
   background-color: #ddd;
   color: #333;
+}
+
+.comuunity_posts_continer_grid small {
+  margin-inline: 1rem;
+}
+
+@media (max-width: 768px) {
+  .comuunity_posts_continer h3 {
+    font-size: 1.2rem;
+  }
+  .community-posts-add-btn {
+    width: 10rem;
+    margin-left: 2rem;
+  }
+  .comuunity_posts_continer_grid {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+  }
+  .comuunity_posts_continer_grid .align-items-center {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+    gap: 0.3rem !important;
+  }
+  .comuunity_posts_continer_grid small {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: gray;
+    width: 90%;
+    text-align: right;
+  }
+  .community-posts-card {
+    padding: 1rem !important;
+  }
+  .community-posts-modal-content {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .community-posts-comment {
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    min-width: 15rem;
+  }
+
+  .community-posts-comment p {
+    margin-bottom: 0.1rem;
+    font-size: 0.8rem;
+  }
+  .community-posts-comment small {
+    font-size: 0.6rem;
+  }
+
+  .community-posts-toggle-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    width: fit-content;
+    padding-inline: 1.5rem;
+    border-radius: 0.5rem;
+  }
 }

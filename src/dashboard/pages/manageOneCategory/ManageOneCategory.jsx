@@ -31,7 +31,12 @@ const ManageOneCategory = () => {
     },
     {
       title: "Media Upload",
-      component: <SectionTwoCategory categoryId={id} />,
+      component: (
+        <SectionTwoCategory
+          setActiveSection={setActiveSection}
+          categoryId={id}
+        />
+      ),
     },
     {
       title: "Products Upload",

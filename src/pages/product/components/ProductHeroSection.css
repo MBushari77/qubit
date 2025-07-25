@@ -44,6 +44,7 @@
   cursor: pointer;
   transition-duration: 0.2s;
   margin-block: 1rem;
+  padding-top: 1rem;
 }
 
 .product-hero-feature:hover {
@@ -56,7 +57,7 @@
 
 .product-hero-feature-title {
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: black;
   display: inline-block;
   /* line-height: 40px; */
@@ -137,4 +138,18 @@
 
 .product-hero-inquiry:hover {
   background-color: #0094dd;
+}
+
+.product-hero-feature-icon {
+  width: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-hero-button {
+    padding: 0.4rem;
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding-inline: 1.5rem;
+  }
 }

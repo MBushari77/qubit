@@ -27,7 +27,7 @@ const QuestionSection = ({ questionData }) => {
                   className="question-section-question"
                   onClick={() => toggleQuestion(index)}
                 >
-                  {item.title}{" "}
+                  <i>{item.title}</i>{" "}
                   <span
                     className={`bi bi-chevron-down ${
                       activeIndex === index && "bi_active"

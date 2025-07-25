@@ -4,6 +4,7 @@ import watchImage from "./img.png"; // Replace with actual image paths
 import API from "../../../utils/API";
 import { useEffect, useState } from "react";
 import BaseAPI from "../../../utils/BaseAPI";
+import { Link } from "react-router-dom";
 
 const CategoryProducts = ({ categoryId }) => {
   const dummyProducts = Array(4).fill({
@@ -65,9 +66,12 @@ const CategoryProducts = ({ categoryId }) => {
               </div>
               <p className="category-products-desc">{product.description}</p>
 
-              <button className="home_prod_card_show_more_link category_hero_button category_product_page_button">
-                Learn More
-              </button>
+              <Link to={product.path}>
+                {" "}
+                <button className="home_prod_card_show_more_link category_hero_button category_product_page_button">
+                  Learn More
+                </button>
+              </Link>
 
               <center>
                 <ul

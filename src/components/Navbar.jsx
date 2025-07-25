@@ -6,16 +6,13 @@ import API from "../utils/API";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Categories
   const [Categories, setCategories] = useState([]);
   useEffect(() => {
     const fetchCategories = async () => {
       try {
         const response = await API.get(`/category`);
-
         setCategories(response.data);
       } catch (error) {
         console.error("Failed to fetch Categories:", error);
@@ -23,23 +20,66 @@ const Navbar = () => {
     };
     fetchCategories();
   }, []);
+
   return (
     <nav className="main-nav-navbar">
-      <div className="main-nav-container">
-        {/* <div className="main-nav-header">
-          <Link to="/" className="main-nav-logo">
-            Qubit
-          </Link>
-          <button
-            className="main-nav-burger"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <i className="bi bi-list" />
-          </button>
-        </div> */}
+      <div className="main-nav-container main-nav-header mobile_nav_container">
+        <Link to="/" className="main-nav-logo">
+          <img src={logo} alt="logo" />
+        </Link>
+        <button
+          className="main-nav-burger"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <i className="bi bi-list" style={{ fontSize: "1.5rem" }} />
+        </button>
+      </div>
 
-        <ul className={`main-nav-list ${menuOpen ? "main-nav-open" : ""}`}>
+      {/* Overlay */}
+      {menuOpen && <div className="side-nav-overlay" onClick={toggleMenu} />}
+
+      {/* Side Nav */}
+      <div className={`side-nav ${menuOpen ? "open" : ""}`}>
+        <ul className="side-nav-list">
+          <li>
+            <Link to="/" onClick={toggleMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={toggleMenu}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={toggleMenu}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/Community" onClick={toggleMenu}>
+              Community
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" onClick={toggleMenu}>
+              Projects
+            </Link>
+          </li>
+          {Categories.map((cat) => (
+            <li key={cat.id}>
+              <Link to={`/category/${cat.id}`} onClick={toggleMenu}>
+                {cat.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Desktop nav list */}
+      <div className="main-nav-container">
+        <ul className="main-nav-list">
           <li className="main-nav-item">
             <Link to="/" className="main-nav-link">
               Home
@@ -63,32 +103,25 @@ const Navbar = () => {
               Community
             </Link>
           </li>
-          {/* <li className="main-nav-item">
-            <Link to="/airpods" className="main-nav-link">
-              <button className="nav_button">Portfolio</button>
-            </Link>
-          </li> */}
         </ul>
       </div>
+
       <hr style={{ margin: "0.2rem", opacity: "0.1" }} />
+
       <center>
-        <ul
-          className={`main-nav-list main-nav-list-two ${
-            menuOpen ? "main-nav-open" : ""
-          }`}
-        >
+        <ul className="main-nav-list main-nav-list-two">
           <li className="main-nav-item">
             <Link to="/" className="main-nav-logo">
-              <img src={logo} alt="" />
+              <img src={logo} alt="logo" />
             </Link>
-          </li>{" "}
+          </li>
           <li className="main-nav-item">
             <Link to="/projects" className="main-nav-link">
               Projects
             </Link>
           </li>
-          {Categories.map((cat, id) => (
-            <li className="main-nav-item" key={id}>
+          {Categories.map((cat) => (
+            <li className="main-nav-item" key={cat.id}>
               <Link to={`/category/${cat.id}`} className="main-nav-link">
                 {cat.name}
               </Link>

@@ -66,7 +66,7 @@ const BlogContent = ({ comunityBlogs, id, setId }) => {
 
   return (
     <div className="community-blog-content">
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-items-center community-blog-content-header">
         <div>
           <h2>{comunityBlogs[id - 1].name}</h2>
         </div>

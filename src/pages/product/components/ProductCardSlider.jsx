@@ -38,7 +38,7 @@ const CardSlider = ({ slides }) => {
               <div className="cards-slide-content">
                 <h4 className="cards-slide-title">{item.title}</h4>
                 <p className="cards-slide-text">{item.text}</p>
-                <Link to={item.link || "#"} className="cards-slide-button">
+                <Link to={item?.path} className="cards-slide-button">
                   Learn More
                 </Link>
               </div>

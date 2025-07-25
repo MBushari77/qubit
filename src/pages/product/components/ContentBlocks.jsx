@@ -8,11 +8,13 @@ const ContentBlocks = ({ blocksData }) => {
       {blocksData.map((item, index) => (
         <div className="content-blocks-item" key={index}>
           <div className="content-blocks-header">
-            <img
-              src={`${BaseAPI}/uploads/${item.icon}`}
-              alt={item.title}
-              className="content-blocks-icon"
-            />
+            <span className="icon-gradient">
+              <img
+                src={`${BaseAPI}/uploads/${item.icon}`}
+                alt={item.title}
+                className="content-blocks-icon"
+              />
+            </span>
             <h4 className="content-blocks-title">{item.title}</h4>
           </div>
           {/* <hr className="content-blocks-divider" /> */}

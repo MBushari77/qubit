@@ -184,9 +184,12 @@ const Product = () => {
 
       <div style={{ backgroundColor: "#131313" }}>
         <ProductMediaGrid product={product} gridContent={mediaGridContent} />
-        <QuestionSection questionData={questions} />
         <ProductCardSlider slides={ticketSlider} />
         <VideoGrid videos={gridVideos} />
+        <QuestionSection questionData={questions} />
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );

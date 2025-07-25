@@ -1,5 +1,6 @@
 .projects_page_container {
   padding-top: 6rem;
+  background-color: #f7f5f7;
 }
 .projects_page_container .cards-slide-card {
   background-color: #ffffff00 !important;

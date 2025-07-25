@@ -78,13 +78,13 @@
 }
 
 .category-products-name {
-  font-size: 2rem;
+  font-size: 1.8rem;
   /* font-weight: bold; */
   margin-top: 10px;
   /* height: 2.5rem; */
   line-height: 2rem;
   color: #5c5c5c;
-  height: 3.5rem;
+  height: 4.5rem;
 }
 
 .category-products-sizes {

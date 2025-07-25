@@ -44,3 +44,19 @@
   font-weight: 500;
   color: #333;
 }
+.product-fliped-videos-image {
+  width: 100%;
+  border-radius: 1.8rem;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .product-fliped-videos-container {
+    padding: 0.5rem;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-inline: 0.1rem !important;
+  }
+  .product-fliped-videos-item {
+    margin-inline: 0.5rem;
+  }
+}

@@ -33,3 +33,19 @@
   color: #555;
   line-height: 1.6;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-fliped-cards-image {
+    width: 40%;
+  }
+  .product-fliped-cards-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.1rem !important;
+  }
+  .product-fliped-cards-text {
+    margin: 0px !important;
+    text-align: center !important;
+  }
+}

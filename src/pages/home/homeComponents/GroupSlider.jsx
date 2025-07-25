@@ -58,7 +58,7 @@ const GroupSlider = () => {
                 <h4 className="group-slider-title">{slide.title}</h4>
               </div>
               <Link
-                to={slide.path}
+                to={slide.link}
                 className="group-slider-button-float bi bi-chevron-right"
               ></Link>
             </div>

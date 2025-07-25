@@ -105,6 +105,15 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 576px) {
+  .why-qubit-card {
+    height: 16rem;
+  }
+  .why-qubit-title {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .why-qubit-card {
     height: 18rem;
@@ -112,13 +121,16 @@
   .why-qubit-title {
     font-size: 1.8rem;
   }
-}
-
-@media (max-width: 576px) {
-  .why-qubit-card {
-    height: 16rem;
+  .why-qubit-title-text {
+    font-size: 1.3rem !important;
+    height: fit-content;
   }
-  .why-qubit-title {
-    font-size: 1.5rem;
+  .hometicket_section {
+    padding-inline: 0.5rem !important;
+  }
+  .home_tickets_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

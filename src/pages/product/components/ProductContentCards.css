@@ -54,3 +54,14 @@
   font-size: 1rem;
   color: gray;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-content-cards-container {
+    padding: 1rem;
+  }
+  .content_cards_title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+}

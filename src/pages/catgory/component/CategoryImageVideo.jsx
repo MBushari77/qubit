@@ -26,7 +26,9 @@ const CategoryImageVideo = ({ categoryId }) => {
     <div className="category-video-wrapper">
       {items.map((item) => (
         <div className="category-video-card" key={item.id}>
-          <h2 className="category-video-title">{item.headline}</h2>
+          {item.headline?.length > 2 && (
+            <h2 className="category-video-title">{item.headline}</h2>
+          )}
           <div className="category-video-media">
             {isVideo(item.media_file) ? (
               <video

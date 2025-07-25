@@ -111,17 +111,54 @@
   background-color: #333;
 }
 
+.hero-slider-card-for-mobile {
+  display: none;
+}
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-slider-container {
+    height: 15rem !important;
+    margin-top: 4rem;
+  }
+
+  .hero-slider-card-for-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5rem;
+  }
+
+  .hero-slider-card-for-mobile .event-calendar {
+    background: #bcbcbca3 !important;
+  }
+
   .hero-slider-card {
     right: 1rem;
-    top: auto;
-    bottom: 1rem;
+    /* top: 50%; */
+    /* bottom: 1rem; */
     transform: none;
     max-width: 90%;
+    /* position: sticky !important; */
+    display: none;
   }
+
+  .event-calendar {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.3
+    ) !important; /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurry glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: none !important; /* Optional border for contrast */
+    border-radius: 1rem; /* Optional rounded corners */
+    padding: 1rem; /* Optional spacing */
+  }
+
   .hero-slider-card-body {
     padding: 0.8rem;
+    display: none;
   }
   .hero-slider-card-title {
     font-size: 1.2rem;
@@ -132,5 +169,43 @@
   .hero-slider-card-btn {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+  }
+  .event-calendar {
+    padding-inline: 0.5rem !important;
+  }
+  .calendar-header {
+    width: 100% !important;
+    max-width: 30rem !important;
+  }
+  .weekdays div {
+    padding: 0.1rem !important;
+    font-size: 0.7rem !important;
+  }
+  .day {
+    padding: 0.2rem !important;
+    font-size: 0.7rem !important;
+  }
+  .selected-day:hover {
+    background-color: #198754 !important;
+    border-radius: 5rem !important;
+  }
+  .form-control {
+    padding-block: 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+  .calendar-form-select {
+    padding-block: 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+  .calendar-form-submit-btn {
+    padding-block: 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+  .calendar-header h4 {
+    font-size: 1.1rem !important;
+  }
+  .calendar-header h5 {
+    font-size: 0.8rem !important;
+    color: gray;
   }
 }

@@ -87,3 +87,15 @@
   display: inline-block;
   /* margin-bottom: 3rem; */
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .product-media-grid-features {
+    width: 80vw;
+  }
+  .product-media-grid-feature-title {
+    margin-bottom: 0.5rem;
+  }
+  .product-media-grid-feature-desc {
+    font-size: 0.9rem;
+  }
+}

@@ -16,7 +16,7 @@ const LogoSlider = ({ logos }) => {
                 alt={item.title}
                 className="logo-slide-image"
               />
-              <p className="logo-slide-title">{item.title}</p>
+              {/* <p className="logo-slide-title">{item.title}</p> */}
             </div>
           ))}
         </div>

@@ -6,10 +6,11 @@ import "swiper/css/navigation";
 import "./ProductBigSlider.css";
 import API from "../../../utils/API";
 import BaseAPI from "../../../utils/BaseAPI";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ProductBigSlider = ({ slides }) => {
   const swiperRef = useRef();
+  const location = useLocation();
 
   return (
     <div className="product-big-slider-container">
@@ -39,10 +40,13 @@ const ProductBigSlider = ({ slides }) => {
                 <p className="product-big-slider-subtitle">{slide.text}</p>
                 <h4 className="product-big-slider-title">{slide.title}</h4>
               </div>
-              <Link
-                to={slide.link}
-                className="group-slider-button-float bi bi-chevron-right"
-              ></Link>
+
+              {location.pathname.slice(0, 9) !== "/product/" && (
+                <Link
+                  to={slide?.link ? slide.link : slide.path}
+                  className="group-slider-button-float bi bi-chevron-right"
+                ></Link>
+              )}
             </div>
           </SwiperSlide>
         ))}

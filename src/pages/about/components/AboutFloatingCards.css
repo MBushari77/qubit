@@ -29,3 +29,27 @@
   font-size: 2rem;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .abpit_floating_cards_container {
+    padding-block: 4rem;
+    width: 100vw;
+    margin: 0px;
+  }
+
+  .abpit_floating_cards_container .card {
+    margin-top: 2rem; /* or 0rem */
+    height: unset !important;
+    margin: 0px;
+    margin-bottom: 1rem;
+  }
+  .abpit_floating_cards_container .card span {
+    font-size: 2.5rem !important;
+  }
+  .abpit_floating_cards_container .card h1 {
+    font-size: 1.2rem;
+  }
+  .abpit_floating_cards_container .card p {
+    font-size: 0.8rem;
+  }
+}

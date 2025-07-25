@@ -132,4 +132,7 @@
   .cards-slide-controls {
     right: 5%;
   }
+  .swiper-backface-hidden .swiper-slide {
+    width: 15rem !important;
+  }
 }

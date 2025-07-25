@@ -49,3 +49,18 @@
   font-size: 14px;
   text-align: left;
 }
+@media (max-width: 768px) {
+  .crew-grid-wrapper {
+    grid-template-columns: repeat(4, 1fr); /* Force 3 columns on mobile */
+    padding-inline: 1rem; /* Reduce horizontal padding for small screens */
+    gap: 0.2rem;
+  }
+
+  .crew-ticket {
+    height: 120px; /* Optional: reduce height for mobile cards */
+  }
+
+  .crew-ticket-title {
+    font-size: 12px; /* Smaller title for mobile */
+  }
+}

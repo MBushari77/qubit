@@ -62,3 +62,20 @@
 .about-grid-container {
   margin-inline: 10%;
 }
+
+@media (max-width: 768px) {
+  .about-grid-title {
+    font-size: 1.2rem;
+  }
+  .about-grid-subtitle {
+    font-size: 0.8rem;
+  }
+  .about-grid-card {
+    height: fit-content !important;
+    padding-bottom: 2rem;
+  }
+  .about-grid-image {
+    margin-block: 1.5rem;
+    height: 20rem;
+  }
+}

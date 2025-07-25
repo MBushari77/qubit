@@ -30,7 +30,7 @@ const SubCategoryHeroSection = ({ subCategory }) => {
               )}
               {specsheet && (
                 <a
-                  href={specsheet}
+                  href={`${BaseAPI}/uploads/${specsheet}`}
                   className="subcategory-hero-button subcategory-hero-specsheet"
                   target="_blank"
                   rel="noopener noreferrer"

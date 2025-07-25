@@ -148,3 +148,26 @@
   object-fit: cover;
   border-radius: 1.8rem;
 }
+
+@media (max-width: 768px) {
+  .community-blog-content-header {
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+  }
+  .community-blog-content-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .community-blog-content-header div:nth-child(2) {
+    text-align: right;
+  }
+  .community-share-btn {
+    padding-block: 0.4rem;
+    font-size: 0.7rem !important;
+    margin-inline: 0.2rem;
+  }
+  .community-close-btn {
+    margin: 0px;
+    font-size: 0.7rem;
+  }
+}
