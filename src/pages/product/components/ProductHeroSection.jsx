@@ -52,7 +52,10 @@ const ProductHeroSection = ({ product }) => {
 
             <div className="product-hero-buttons">
               <a
-                href={`/inquiry/${id}`}
+                href={`https://wa.me/+966550017112?text=${encodeURIComponent(
+                  `Hi, I am interested in your product: ${product.name}`
+                )}`}
+                target="_blank"
                 className="product-hero-button product-hero-specsheet"
               >
                 Get Inquiry

@@ -104,8 +104,8 @@
 .side-nav {
   position: fixed;
   top: 0;
-  right: -260px;
-  width: 250px;
+  right: -100%;
+  width: 80%;
   height: 100vh;
   background-color: #fff;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
@@ -115,6 +115,12 @@
   gap: 1.5rem;
   transition: right 0.3s ease-in-out;
   z-index: 1100;
+}
+.side-nav-cat-icon {
+  height: 1.3rem;
+  width: 1.3rem;
+  object-fit: cover;
+  margin-right: 1rem;
 }
 
 .side-nav.open {
@@ -134,6 +140,7 @@
   font-weight: 500;
   display: block;
   transition: color 0.2s;
+  margin-bottom: 1rem;
 }
 
 .side-nav-list li a:hover {
@@ -193,4 +200,40 @@
   .main-nav-item {
     margin: 0.5rem 0;
   }
+}
+/* Divider line above categories */
+.side-nav-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1rem 0;
+}
+
+/* Footer links in the side nav */
+.side-nav-footer {
+  margin-top: auto; /* Push to bottom */
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.side-nav-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav-footer-list li {
+  margin: 0.5rem 0;
+}
+
+.side-nav-footer-list a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  transition: color 0.2s;
+}
+
+.side-nav-footer-list a:hover {
+  color: #0071e3;
 }

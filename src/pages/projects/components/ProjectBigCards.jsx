@@ -21,7 +21,7 @@ const ProjectBigCards = ({ slides }) => {
                 <h4 className="product-big-slider-title">{slide.title}</h4>
               </div>
               <Link
-                to={slide.link}
+                to={slide.path}
                 className="group-slider-button-float bi bi-chevron-right"
               ></Link>
             </div>

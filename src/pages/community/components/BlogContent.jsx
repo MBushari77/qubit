@@ -91,7 +91,10 @@ const BlogContent = ({ comunityBlogs, id, setId }) => {
         <div key={idx} className="community_images">
           <h5 className="community-subtitle">{section.title}</h5>
           <p>{section.text}</p>
-          <img src={`${BaseAPI}/uploads/${section.icon}`} />
+          {section?.icon?.length > 2 && (
+            <img src={`${BaseAPI}/uploads/${section.icon}`} />
+          )}
+          <hr />
         </div>
       ))}
 

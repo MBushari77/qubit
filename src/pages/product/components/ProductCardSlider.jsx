@@ -12,7 +12,7 @@ const CardSlider = ({ slides }) => {
 
   return (
     <div className="cards-slide-wrapper">
-      <h3 className="cards-slide-title-heading">Explore Our Icons</h3>
+      <h3 className="cards-slide-title-heading">Explore More</h3>
 
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}

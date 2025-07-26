@@ -48,6 +48,11 @@
   width: 100%;
   border-radius: 1.8rem;
 }
+.product-fliped-videos-item h1 {
+  font-size: 3.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .product-fliped-videos-container {
@@ -58,5 +63,10 @@
   }
   .product-fliped-videos-item {
     margin-inline: 0.5rem;
+  }
+  .product-fliped-videos-item h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
   }
 }

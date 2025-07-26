@@ -28,7 +28,7 @@
 .contact-left-col {
   width: 45vw;
   /* height: 100%; */
-  background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-image: url("./image.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 1.9rem;

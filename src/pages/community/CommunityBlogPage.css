@@ -45,11 +45,14 @@
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .community-subtitle {
   margin-top: 1.5rem;
   font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .community-share-btn {

@@ -114,6 +114,7 @@
 .hero-slider-card-for-mobile {
   display: none;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-slider-container {
@@ -126,6 +127,8 @@
     justify-content: center;
     align-items: center;
     padding-block: 5rem;
+    background-image: url("https://4kwallpapers.com/images/wallpapers/windows-11-stock-black-abstract-black-background-amoled-1080x2340-8971.jpg");
+    background-size: cover;
   }
 
   .hero-slider-card-for-mobile .event-calendar {

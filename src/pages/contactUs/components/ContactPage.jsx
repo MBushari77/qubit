@@ -37,7 +37,7 @@ const ContactPage = () => {
       return;
     }
 
-    setSuccessMsg("Thank you for your message!");
+    setSuccessMsg("Thank you for reaching out to Qubit Electronics!");
     setFormData({ name: "", email: "", message: "" });
 
     setTimeout(() => setSuccessMsg(""), 3000);
@@ -46,36 +46,26 @@ const ContactPage = () => {
   return (
     <div className="contact-container">
       <div className="contact-left-col">
-        <img
+        {/* <img
           className="contact-logo"
-          src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/logo.png"
-          alt="Logo"
-        />
+          src="https://britepixl.com/assets/qubit-logo.png"
+          alt="Qubit Electronics Logo"
+        /> */}
       </div>
 
       <div className="contact-right-col">
-        {/* <div className="contact-theme-switch-wrapper">
-          <label className="contact-theme-switch" htmlFor="checkbox">
-            <input
-              type="checkbox"
-              id="checkbox"
-              onChange={handleToggleTheme}
-              checked={theme === "dark"}
-            />
-            <div className="contact-slider contact-round"></div>
-          </label>
-          <div className="contact-toggle-label">Dark Mode</div>
-        </div> */}
+        {/* Theme switch removed for simplicity */}
 
-        <h1 className="contact-heading">Contact us</h1>
+        <h1 className="contact-heading">Get in Touch</h1>
         <p className="contact-description">
-          Planning to visit Indonesia soon? Get insider tips on where to go,
-          things to do and find best deals for your next adventure.
+          Have questions about our LED displays, customized monitors, or visual
+          project implementations? We're here to help. Let us know how we can
+          support your next idea with Qubit's visual solutions.
         </p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <label className="contact-label" htmlFor="name">
-            Full name
+            Full Name
           </label>
           <input
             className="contact-input"
@@ -110,14 +100,14 @@ const ContactPage = () => {
             id="message"
             name="message"
             rows="6"
-            placeholder="Your Message"
+            placeholder="Tell us about your project or inquiry"
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
 
           <button className="contact-button" type="submit">
-            Send
+            Send Message
           </button>
         </form>
 

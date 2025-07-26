@@ -27,7 +27,7 @@ const GroupSlider = () => {
 
   return (
     <div className="group-slider-container">
-      <h3 className="group-slider-title-container">Explore Our Groups.</h3>
+      <h3 className="group-slider-title-container">Explore More.</h3>
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         slidesPerView={1.2}

@@ -2,43 +2,18 @@ import React from "react";
 import "./AboutGridSection.css";
 import image from "./center_image.jpg";
 
-const features = [
-  {
-    icon: "bi-graph-up",
-    title: "Real-time analytics",
-    description:
-      "Gain actionable insights with our real-time analytics feature",
-  },
-  {
-    icon: "bi-pencil-square",
-    title: "Customizable reports",
-    description: "Streamline your financial processes with automated workflows",
-  },
-  {
-    icon: "bi-phone",
-    title: "Mobile accessibility",
-    description:
-      "Manage your finances on the go with our mobile-friendly platform",
-  },
-  {
-    icon: "bi-shield-lock",
-    title: "Enhanced security",
-    description:
-      "Protect your sensitive financial data with our state-of-the-art security measures",
-  },
-];
-
 const AboutGridSection = () => {
   return (
     <section className="about-grid-section py-5">
       <div className="about-grid-container">
         <div className="text-center mb-5">
           <h2 className="about-grid-title">
-            Core features that set us apart from the competition
+            What Makes Our Visual Solutions Unique
           </h2>
           <p className="about-grid-subtitle">
-            Explore our standout features designed to deliver exceptional
-            performance and value, distinguishing us from the competition.
+            We specialize in delivering high-performance display technologies
+            built for versatility, precision, and aesthetic impact—no matter the
+            environment.
           </p>
         </div>
 
@@ -46,19 +21,21 @@ const AboutGridSection = () => {
           <div className="col-md-4 d-flex flex-column gap-4">
             <div className="about-grid-card">
               <div>
-                <i className="bi bi-graph-up about-grid-icon" />
-                <h5 className="about-grid-card-title">Real-time analytics</h5>
+                <i className="bi bi-aspect-ratio about-grid-icon" />
+                <h5 className="about-grid-card-title">Custom Shapes & Sizes</h5>
                 <p className="about-grid-card-desc">
-                  Gain actionable insights with our real-time analytics feature
+                  From curved LED walls to circular kiosks, we offer tailor-made
+                  display solutions for creative installations.
                 </p>
               </div>
             </div>
             <div className="about-grid-card">
               <div>
-                <i className="bi bi-pencil-square about-grid-icon" />
-                <h5 className="about-grid-card-title">Customizable reports</h5>
+                <i className="bi bi-easel2 about-grid-icon" />
+                <h5 className="about-grid-card-title">Seamless Integration</h5>
                 <p className="about-grid-card-desc">
-                  Streamline your financial processes with automated workflows
+                  Designed to blend effortlessly into any architectural or event
+                  setup with minimal disruption.
                 </p>
               </div>
             </div>
@@ -67,7 +44,7 @@ const AboutGridSection = () => {
           <div className="col-md-4 text-center">
             <img
               src={image}
-              alt="Feature illustration"
+              alt="Visual solutions illustration"
               className="about-grid-image"
             />
           </div>
@@ -75,21 +52,23 @@ const AboutGridSection = () => {
           <div className="col-md-4 d-flex flex-column gap-4">
             <div className="about-grid-card">
               <div>
-                <i className="bi bi-phone about-grid-icon" />
-                <h5 className="about-grid-card-title">Mobile accessibility</h5>
+                <i className="bi bi-brightness-high about-grid-icon" />
+                <h5 className="about-grid-card-title">
+                  High Brightness Displays
+                </h5>
                 <p className="about-grid-card-desc">
-                  Manage your finances on the go with our mobile-friendly
-                  platform
+                  Engineered to perform in bright outdoor conditions without
+                  compromising on clarity or color.
                 </p>
               </div>
             </div>
             <div className="about-grid-card">
               <div>
-                <i className="bi bi-shield-lock about-grid-icon" />
-                <h5 className="about-grid-card-title">Enhanced security</h5>
+                <i className="bi bi-shield-check about-grid-icon" />
+                <h5 className="about-grid-card-title">Reliable & Durable</h5>
                 <p className="about-grid-card-desc">
-                  Protect your sensitive financial data with our
-                  state-of-the-art security measures
+                  Built for endurance, each unit is tested for heat, weather,
+                  and long-hour operation—ideal for permanent or rental use.
                 </p>
               </div>
             </div>

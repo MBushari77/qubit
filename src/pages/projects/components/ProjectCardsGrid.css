@@ -119,3 +119,11 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .project-cards-grid {
+    height: auto;
+    padding: 1rem 0.5rem;
+    display: none;
+  }
+}

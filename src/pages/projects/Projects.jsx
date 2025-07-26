@@ -110,12 +110,9 @@ const Projects = () => {
   return (
     <>
       <div className="projects_page_container">
-        <div className="crew-title">
-          <span>OUR CREW</span>
-        </div>
         <CrewGrid slides={ticketSlider} />
         {/* <CardSlider slides={ticketSlider} /> */}
-        <ProjectsMainSlider slides={content} />
+        {/* <ProjectsMainSlider slides={content} /> */}
         {/* <RoadMap roadmapData={roadmapData} /> */}
         <MediaOnProjectPage media={roadmapData} />
         {/* <ProjectsProducts /> */}

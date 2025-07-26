@@ -13,6 +13,7 @@ import Contact from "./pages/contactUs/Contact";
 import CommunityBlogPage from "./pages/community/CommunityBlogPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Project from "./pages/project/Project";
+import ProductsAddingSoon from "./components/ProductsAddingSoon";
 function App() {
   return (
     <Router>
@@ -34,6 +35,7 @@ function App() {
         {/* Dashboard Section */}
         {/* handle login later */}
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
+        <Route path="/adding_soon" element={<ProductsAddingSoon />} />
       </Routes>
       <Footer />
     </Router>

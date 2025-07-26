@@ -20,14 +20,14 @@ const SubCategoryHeroSection = ({ subCategory }) => {
             <p className="subcategory-hero-text">{text}</p>
 
             <div className="subcategory-hero-buttons">
-              {path && (
+              {/* {path && (
                 <a
                   href={`/inquiry/${id}`}
                   className="subcategory-hero-button subcategory-hero-inquiry"
                 >
                   Get Inquiry
                 </a>
-              )}
+              )} */}
               {specsheet && (
                 <a
                   href={`${BaseAPI}/uploads/${specsheet}`}
