@@ -18,9 +18,12 @@ const Footer = () => {
               <li>
                 <i className="fas fa-map-marker-alt me-2"></i>
                 <span>
-                  Office 6, 5258 Anas Ibn Malik Road, Al Malqa District,
+                  Qubit International Entertainment Company
                   <br />
-                  Riyadh 13521-7479, Saudi Arabia
+                  Building 3071, Office 6, 7479 Anas Ibn Malik Road, Al Malqa
+                  District,
+                  <br />
+                  Riyadh 13525-7479
                 </span>
               </li>
               <li>
@@ -54,7 +57,6 @@ const Footer = () => {
               <li>
                 <Link to="/blog">Insights & News</Link>
               </li>
-
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
@@ -98,14 +100,6 @@ const Footer = () => {
               >
                 <i className="bi bi-facebook"></i>
               </a>
-              {/* <a
-                href="https://twitter.com/qubitksa"
-                className="social-icon"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="bi bi-twitter-x"></i>
-              </a> */}
               <a
                 href="https://www.instagram.com/qubit.ae/"
                 className="social-icon"
@@ -123,7 +117,7 @@ const Footer = () => {
                 <i className="bi bi-linkedin"></i>
               </a>
               <a
-                href="https://wa.me/+97143206880"
+                href="https://wa.me/+966550017112"
                 className="social-icon"
                 target="_blank"
                 rel="noreferrer"
@@ -140,7 +134,7 @@ const Footer = () => {
         <div className="container">
           <div className="row py-4">
             <div className="col-md-6 text-center text-md-start">
-              <p>&copy; 2024 Qubit. All rights reserved.</p>
+              <p>&copy; {Date().slice(11, 15)} Qubit. All rights reserved.</p>
             </div>
             <div className="col-md-6 text-center text-md-end">
               <p>

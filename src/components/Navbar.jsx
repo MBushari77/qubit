@@ -24,6 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className="main-nav-navbar">
+      <span className="tag_line">Design. Engage. Inspire.</span>
       <div className="main-nav-container main-nav-header mobile_nav_container">
         <Link to="/" className="main-nav-logo">
           <img src={logo} alt="logo" />
@@ -36,10 +37,8 @@ const Navbar = () => {
           <i className="bi bi-list" style={{ fontSize: "1.5rem" }} />
         </button>
       </div>
-
       {/* Overlay */}
       {menuOpen && <div className="side-nav-overlay" onClick={toggleMenu} />}
-
       {/* Side Nav */}
       <div className={`side-nav ${menuOpen ? "open" : ""}`}>
         <ul className="side-nav-list">
@@ -53,7 +52,7 @@ const Navbar = () => {
 
           {Categories.map((cat) => (
             <li key={cat.id}>
-              <Link to={`/category/${cat.id}`} onClick={toggleMenu}>
+              <Link to={`/one-category/${cat.id}`} onClick={toggleMenu}>
                 {/* <span className="bi bi-box" /> &nbsp; */}
                 <img
                   src={`${BaseAPI}/uploads/${cat?.icon}`}
@@ -95,7 +94,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-
       {/* Desktop nav list */}
       <div className="main-nav-container">
         <ul className="main-nav-list">
@@ -124,9 +122,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
       <hr style={{ margin: "0.2rem", opacity: "0.1" }} />
-
       <center>
         <ul className="main-nav-list main-nav-list-two">
           <li className="main-nav-item">
@@ -141,7 +137,7 @@ const Navbar = () => {
           </li>
           {Categories.map((cat) => (
             <li className="main-nav-item" key={cat.id}>
-              <Link to={`/category/${cat.id}`} className="main-nav-link">
+              <Link to={`/one-category/${cat.id}`} className="main-nav-link">
                 {cat.name}
               </Link>
             </li>

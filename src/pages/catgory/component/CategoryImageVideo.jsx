@@ -11,7 +11,6 @@ const CategoryImageVideo = ({ categoryId }) => {
 
     API.get(`/sectiontwo/category/${categoryId}`)
       .then((res) => {
-        console.log(res.data || []);
         setItems(res.data || []);
       })
       .catch((err) => {
@@ -25,10 +24,7 @@ const CategoryImageVideo = ({ categoryId }) => {
   return (
     <div className="category-video-wrapper">
       {items.map((item) => (
-        <div className="category-video-card" key={item.id}>
-          {item.headline?.length > 2 && (
-            <h2 className="category-video-title">{item.headline}</h2>
-          )}
+        <div className="category-video-banner" key={item.id}>
           <div className="category-video-media">
             {isVideo(item.media_file) ? (
               <video
@@ -42,9 +38,14 @@ const CategoryImageVideo = ({ categoryId }) => {
             ) : (
               <img
                 src={`${BaseAPI}/uploads/${item.media_file}`}
-                alt="Category Media"
+                alt="Category"
                 className="category-video-element"
               />
+            )}
+            {item.headline?.length > 2 && (
+              <div className="category-video-title">
+                <h2>{item.headline}</h2>
+              </div>
             )}
           </div>
         </div>

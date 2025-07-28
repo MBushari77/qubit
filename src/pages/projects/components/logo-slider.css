@@ -6,7 +6,7 @@
 }
 
 .logo-slider-heading {
-  font-size: 24px;
+  font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 30px;
 }
@@ -47,6 +47,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #333;
+  font-size: 2.5rem;
 }
 
 /* Infinite scrolling animation */
@@ -62,4 +63,12 @@
 /* Pause on hover entire track */
 .logo-slider-track-wrapper:hover .logo-slider-track {
   animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .logo-slider-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
 }

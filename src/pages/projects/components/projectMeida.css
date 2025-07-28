@@ -11,3 +11,26 @@
 .category-video-media {
   border-radius: 0px !important;
 }
+
+@media (max-width: 768px) {
+  .project-category-video-wrapper .category-video-element {
+    height: 30rem;
+  }
+  .category-video-title {
+    font-size: 1.5rem;
+    bottom: unset;
+    top: 30rem;
+    left: 0px;
+    right: 0px;
+    text-align: left;
+  }
+  .projects_page_container {
+    height: fit-content;
+  }
+  .project-category-video-wrapper {
+    height: 30rem;
+  }
+  .project_callendar_container {
+    display: none;
+  }
+}

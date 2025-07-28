@@ -13,7 +13,7 @@ const CardForGrid = ({ slide, idx }) => {
         <p className="why-qubit-subtitle">{slide?.text}</p>
       </div>
       <Link
-        to={slide?.path}
+        to={`/community`}
         className="group-slider-button-float bi bi-chevron-right"
       ></Link>
     </div>
